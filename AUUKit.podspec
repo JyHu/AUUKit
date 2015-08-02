@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "AUUKit"
-  s.version      = "v1.0"
+  s.version      = "1.0"
   s.summary      = "AUUKit for kit handle"
   s.homepage     = "https://github.com/JyHu/AUUKit"
   s.license      = "MIT"
