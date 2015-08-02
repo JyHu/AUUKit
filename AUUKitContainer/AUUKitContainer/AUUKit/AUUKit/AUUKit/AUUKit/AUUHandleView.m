@@ -10,7 +10,6 @@
 #import <objc/runtime.h>
 #import "AUUNumber.h"
 #import "AUUStorage.h"
-#import "AUURegister.h"
 
 
 static void * pNeedAnimationWhenFrameChangedKey = (void *)@"pNeedAnimationWhenFrameChangedKey";
@@ -36,13 +35,7 @@ static void * pDurationWhenFrameChangedKey      = (void *)@"pDurationWhenFrameCh
 
 - (id)initWithDuration:(NSTimeInterval)duration
 {
-    [AUURegister unViewInitWithFrameExchange];
-    [AUURegister unViewInitExchange];
-    
     self = [[UIView alloc] init];
-    
-    [AUURegister viewInitWithFrameExchange];
-    [AUURegister viewInitExchange];
     
     if (self)
     {

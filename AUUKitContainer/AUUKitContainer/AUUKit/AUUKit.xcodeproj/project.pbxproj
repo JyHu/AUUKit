@@ -21,57 +21,59 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		1C897B501B638B6C00549D49 /* AUULaunchGuidView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C897B4E1B638B6C00549D49 /* AUULaunchGuidView.h */; };
-		1C897B511B638B6C00549D49 /* AUULaunchGuidView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C897B4F1B638B6C00549D49 /* AUULaunchGuidView.m */; };
-		995319631B0B7BE50021704F /* AUUPlotView.h in Headers */ = {isa = PBXBuildFile; fileRef = 995319611B0B7BE50021704F /* AUUPlotView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		995319641B0B7BE50021704F /* AUUPlotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 995319621B0B7BE50021704F /* AUUPlotView.m */; };
-		9953196B1B0B7C030021704F /* AUUColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 995319691B0B7C030021704F /* AUUColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9953196C1B0B7C030021704F /* AUUColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9953196A1B0B7C030021704F /* AUUColor.m */; };
-		9953196F1B0B7F9E0021704F /* AUUImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 9953196D1B0B7F9E0021704F /* AUUImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		995319701B0B7F9E0021704F /* AUUImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9953196E1B0B7F9E0021704F /* AUUImage.m */; };
 		9961595B1B14B787009CD275 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9961595A1B14B787009CD275 /* CoreGraphics.framework */; };
-		9991B03B1B0A22DC00EC3210 /* AUUKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9991B03A1B0A22DC00EC3210 /* AUUKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		997F32821B6E6DC3000B3F6A /* AUUDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = 997F324B1B6E6DC3000B3F6A /* AUUDebug.h */; };
+		997F32831B6E6DC3000B3F6A /* AUUColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 997F324D1B6E6DC3000B3F6A /* AUUColor.h */; };
+		997F32841B6E6DC3000B3F6A /* AUUColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 997F324E1B6E6DC3000B3F6A /* AUUColor.m */; };
+		997F32851B6E6DC3000B3F6A /* AUUHandleView.h in Headers */ = {isa = PBXBuildFile; fileRef = 997F324F1B6E6DC3000B3F6A /* AUUHandleView.h */; };
+		997F32861B6E6DC3000B3F6A /* AUUHandleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 997F32501B6E6DC3000B3F6A /* AUUHandleView.m */; };
+		997F32871B6E6DC3000B3F6A /* AUUImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 997F32511B6E6DC3000B3F6A /* AUUImage.h */; };
+		997F32881B6E6DC3000B3F6A /* AUUImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 997F32521B6E6DC3000B3F6A /* AUUImage.m */; };
+		997F32891B6E6DC3000B3F6A /* AUUImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 997F32531B6E6DC3000B3F6A /* AUUImageView.h */; };
+		997F328A1B6E6DC3000B3F6A /* AUUImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 997F32541B6E6DC3000B3F6A /* AUUImageView.m */; };
+		997F328B1B6E6DC3000B3F6A /* AUULabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 997F32551B6E6DC3000B3F6A /* AUULabel.h */; };
+		997F328C1B6E6DC3000B3F6A /* AUULabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 997F32561B6E6DC3000B3F6A /* AUULabel.m */; };
+		997F328D1B6E6DC3000B3F6A /* AUUPlotView.h in Headers */ = {isa = PBXBuildFile; fileRef = 997F32571B6E6DC3000B3F6A /* AUUPlotView.h */; };
+		997F328E1B6E6DC3000B3F6A /* AUUPlotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 997F32581B6E6DC3000B3F6A /* AUUPlotView.m */; };
+		997F328F1B6E6DC3000B3F6A /* AUUView.h in Headers */ = {isa = PBXBuildFile; fileRef = 997F32591B6E6DC3000B3F6A /* AUUView.h */; };
+		997F32901B6E6DC3000B3F6A /* AUUView.m in Sources */ = {isa = PBXBuildFile; fileRef = 997F325A1B6E6DC3000B3F6A /* AUUView.m */; };
+		997F32911B6E6DC3000B3F6A /* AUUKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 997F325B1B6E6DC3000B3F6A /* AUUKit.h */; };
+		997F32921B6E6DC3000B3F6A /* AUUMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 997F325C1B6E6DC3000B3F6A /* AUUMacro.h */; };
+		997F32931B6E6DC3000B3F6A /* AUUNotes.h in Headers */ = {isa = PBXBuildFile; fileRef = 997F325D1B6E6DC3000B3F6A /* AUUNotes.h */; };
+		997F32941B6E6DC3000B3F6A /* AUUArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 997F325F1B6E6DC3000B3F6A /* AUUArray.h */; };
+		997F32951B6E6DC3000B3F6A /* AUUArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 997F32601B6E6DC3000B3F6A /* AUUArray.m */; };
+		997F32961B6E6DC3000B3F6A /* AUUDate.h in Headers */ = {isa = PBXBuildFile; fileRef = 997F32611B6E6DC3000B3F6A /* AUUDate.h */; };
+		997F32971B6E6DC3000B3F6A /* AUUDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 997F32621B6E6DC3000B3F6A /* AUUDate.m */; };
+		997F32981B6E6DC3000B3F6A /* AUUJSONAdaptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 997F32631B6E6DC3000B3F6A /* AUUJSONAdaptor.h */; };
+		997F32991B6E6DC3000B3F6A /* AUUJSONAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 997F32641B6E6DC3000B3F6A /* AUUJSONAdaptor.m */; };
+		997F329A1B6E6DC3000B3F6A /* AUUMutableArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 997F32651B6E6DC3000B3F6A /* AUUMutableArray.h */; };
+		997F329B1B6E6DC3000B3F6A /* AUUMutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 997F32661B6E6DC3000B3F6A /* AUUMutableArray.m */; };
+		997F329C1B6E6DC3000B3F6A /* AUUNumber.h in Headers */ = {isa = PBXBuildFile; fileRef = 997F32671B6E6DC3000B3F6A /* AUUNumber.h */; };
+		997F329D1B6E6DC3000B3F6A /* AUUNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 997F32681B6E6DC3000B3F6A /* AUUNumber.m */; };
+		997F329E1B6E6DC3000B3F6A /* AUUString.h in Headers */ = {isa = PBXBuildFile; fileRef = 997F32691B6E6DC3000B3F6A /* AUUString.h */; };
+		997F329F1B6E6DC3000B3F6A /* AUUString.m in Sources */ = {isa = PBXBuildFile; fileRef = 997F326A1B6E6DC3000B3F6A /* AUUString.m */; };
+		997F32A01B6E6DC3000B3F6A /* AUUStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 997F326B1B6E6DC3000B3F6A /* AUUStorage.h */; };
+		997F32A11B6E6DC3000B3F6A /* AUUStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 997F326C1B6E6DC3000B3F6A /* AUUStorage.m */; };
+		997F32A21B6E6DC3000B3F6A /* AUUDataEncryption.h in Headers */ = {isa = PBXBuildFile; fileRef = 997F326E1B6E6DC3000B3F6A /* AUUDataEncryption.h */; };
+		997F32A31B6E6DC3000B3F6A /* AUUDataEncryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 997F326F1B6E6DC3000B3F6A /* AUUDataEncryption.m */; };
+		997F32A41B6E6DC3000B3F6A /* AUUStringEncryption.h in Headers */ = {isa = PBXBuildFile; fileRef = 997F32701B6E6DC3000B3F6A /* AUUStringEncryption.h */; };
+		997F32A51B6E6DC3000B3F6A /* AUUStringEncryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 997F32711B6E6DC3000B3F6A /* AUUStringEncryption.m */; };
+		997F32A61B6E6DC3000B3F6A /* AUUImageViewSyncCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 997F32731B6E6DC3000B3F6A /* AUUImageViewSyncCache.h */; };
+		997F32A71B6E6DC3000B3F6A /* AUUImageViewSyncCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 997F32741B6E6DC3000B3F6A /* AUUImageViewSyncCache.m */; };
+		997F32A81B6E6DC3000B3F6A /* AUUNetworkHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 997F32751B6E6DC3000B3F6A /* AUUNetworkHandler.h */; };
+		997F32A91B6E6DC3000B3F6A /* AUUNetworkHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 997F32761B6E6DC3000B3F6A /* AUUNetworkHandler.m */; };
+		997F32AA1B6E6DC3000B3F6A /* AUUURLOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 997F32771B6E6DC3000B3F6A /* AUUURLOperation.h */; };
+		997F32AB1B6E6DC3000B3F6A /* AUUURLOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 997F32781B6E6DC3000B3F6A /* AUUURLOperation.m */; };
+		997F32AC1B6E6DC3000B3F6A /* AUUIndicator.h in Headers */ = {isa = PBXBuildFile; fileRef = 997F327A1B6E6DC3000B3F6A /* AUUIndicator.h */; };
+		997F32AD1B6E6DC3000B3F6A /* AUUIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 997F327B1B6E6DC3000B3F6A /* AUUIndicator.m */; };
+		997F32AE1B6E6DC3000B3F6A /* AUULaunchGuidView.h in Headers */ = {isa = PBXBuildFile; fileRef = 997F327C1B6E6DC3000B3F6A /* AUULaunchGuidView.h */; };
+		997F32AF1B6E6DC3000B3F6A /* AUULaunchGuidView.m in Sources */ = {isa = PBXBuildFile; fileRef = 997F327D1B6E6DC3000B3F6A /* AUULaunchGuidView.m */; };
+		997F32B01B6E6DC3000B3F6A /* AUUPopView.h in Headers */ = {isa = PBXBuildFile; fileRef = 997F327E1B6E6DC3000B3F6A /* AUUPopView.h */; };
+		997F32B11B6E6DC3000B3F6A /* AUUPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 997F327F1B6E6DC3000B3F6A /* AUUPopView.m */; };
+		997F32B21B6E6DC3000B3F6A /* AUUProgressIndicator.h in Headers */ = {isa = PBXBuildFile; fileRef = 997F32801B6E6DC3000B3F6A /* AUUProgressIndicator.h */; };
+		997F32B31B6E6DC3000B3F6A /* AUUProgressIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 997F32811B6E6DC3000B3F6A /* AUUProgressIndicator.m */; };
 		9991B0411B0A22DC00EC3210 /* AUUKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9991B0351B0A22DC00EC3210 /* AUUKit.framework */; };
 		9991B0481B0A22DC00EC3210 /* AUUKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9991B0471B0A22DC00EC3210 /* AUUKitTests.m */; };
-		9991B05A1B0A23A500EC3210 /* AUUMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 9991B0521B0A23A500EC3210 /* AUUMacro.h */; };
-		9991B05B1B0A23A500EC3210 /* AUUNotes.h in Headers */ = {isa = PBXBuildFile; fileRef = 9991B0531B0A23A500EC3210 /* AUUNotes.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9999051B1B135C70008B08A2 /* AUUString.h in Headers */ = {isa = PBXBuildFile; fileRef = 999905191B135C70008B08A2 /* AUUString.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9999051C1B135C70008B08A2 /* AUUString.m in Sources */ = {isa = PBXBuildFile; fileRef = 9999051A1B135C70008B08A2 /* AUUString.m */; };
-		9999051F1B1371BE008B08A2 /* AUUNumber.h in Headers */ = {isa = PBXBuildFile; fileRef = 9999051D1B1371BE008B08A2 /* AUUNumber.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		999905201B1371BE008B08A2 /* AUUNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 9999051E1B1371BE008B08A2 /* AUUNumber.m */; };
-		99AC7B891B10E2F300B33FB4 /* AUUJSONAdaptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 99AC7B871B10E2F300B33FB4 /* AUUJSONAdaptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		99AC7B8A1B10E2F300B33FB4 /* AUUJSONAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 99AC7B881B10E2F300B33FB4 /* AUUJSONAdaptor.m */; };
-		99AC7B8D1B11565800B33FB4 /* AUUArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 99AC7B8B1B11565800B33FB4 /* AUUArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		99AC7B8E1B11565800B33FB4 /* AUUArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 99AC7B8C1B11565800B33FB4 /* AUUArray.m */; };
-		99AC7B911B11582E00B33FB4 /* AUUMutableArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 99AC7B8F1B11582E00B33FB4 /* AUUMutableArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		99AC7B921B11582E00B33FB4 /* AUUMutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 99AC7B901B11582E00B33FB4 /* AUUMutableArray.m */; };
-		99AC7B951B115A9200B33FB4 /* AUUImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 99AC7B931B115A9200B33FB4 /* AUUImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		99AC7B961B115A9200B33FB4 /* AUUImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99AC7B941B115A9200B33FB4 /* AUUImageView.m */; };
-		99AC7B9A1B11610000B33FB4 /* AUUURLOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 99AC7B981B11610000B33FB4 /* AUUURLOperation.h */; };
-		99AC7B9B1B11610000B33FB4 /* AUUURLOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 99AC7B991B11610000B33FB4 /* AUUURLOperation.m */; };
-		99BE86531B28834F00AE98AC /* AUUNetworkHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 99BE86511B28834F00AE98AC /* AUUNetworkHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		99BE86541B28834F00AE98AC /* AUUNetworkHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 99BE86521B28834F00AE98AC /* AUUNetworkHandler.m */; };
-		99BE86571B2944F000AE98AC /* AUUImageViewSyncCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 99BE86551B2944F000AE98AC /* AUUImageViewSyncCache.h */; };
-		99BE86581B2944F000AE98AC /* AUUImageViewSyncCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 99BE86561B2944F000AE98AC /* AUUImageViewSyncCache.m */; };
-		99BE865C1B294DC800AE98AC /* AUUPopView.h in Headers */ = {isa = PBXBuildFile; fileRef = 99BE865A1B294DC800AE98AC /* AUUPopView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		99BE865D1B294DC800AE98AC /* AUUPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99BE865B1B294DC800AE98AC /* AUUPopView.m */; };
-		99BE86601B2971D900AE98AC /* AUUProgressIndicator.h in Headers */ = {isa = PBXBuildFile; fileRef = 99BE865E1B2971D900AE98AC /* AUUProgressIndicator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		99BE86611B2971D900AE98AC /* AUUProgressIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 99BE865F1B2971D900AE98AC /* AUUProgressIndicator.m */; };
-		99BE86641B29921800AE98AC /* AUUIndicator.h in Headers */ = {isa = PBXBuildFile; fileRef = 99BE86621B29921800AE98AC /* AUUIndicator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		99BE86651B29921800AE98AC /* AUUIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 99BE86631B29921800AE98AC /* AUUIndicator.m */; };
-		C94179681B155E6D002E490D /* AUUStringEncryption.h in Headers */ = {isa = PBXBuildFile; fileRef = C94179661B155E6D002E490D /* AUUStringEncryption.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C94179691B155E6D002E490D /* AUUStringEncryption.m in Sources */ = {isa = PBXBuildFile; fileRef = C94179671B155E6D002E490D /* AUUStringEncryption.m */; };
-		C941796C1B155F9D002E490D /* AUUDataEncryption.h in Headers */ = {isa = PBXBuildFile; fileRef = C941796A1B155F9D002E490D /* AUUDataEncryption.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C941796D1B155F9D002E490D /* AUUDataEncryption.m in Sources */ = {isa = PBXBuildFile; fileRef = C941796B1B155F9D002E490D /* AUUDataEncryption.m */; };
-		C959231D1B0B404300B9D1A3 /* AUUDate.h in Headers */ = {isa = PBXBuildFile; fileRef = C959231B1B0B404300B9D1A3 /* AUUDate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C959231E1B0B404300B9D1A3 /* AUUDate.m in Sources */ = {isa = PBXBuildFile; fileRef = C959231C1B0B404300B9D1A3 /* AUUDate.m */; };
-		C97E8D3E1B1407EC0054EFAB /* AUUStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = C97E8D3C1B1407EC0054EFAB /* AUUStorage.h */; };
-		C97E8D3F1B1407EC0054EFAB /* AUUStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = C97E8D3D1B1407EC0054EFAB /* AUUStorage.m */; };
-		C97E8D461B14201E0054EFAB /* AUUView.h in Headers */ = {isa = PBXBuildFile; fileRef = C97E8D441B14201E0054EFAB /* AUUView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C97E8D471B14201E0054EFAB /* AUUView.m in Sources */ = {isa = PBXBuildFile; fileRef = C97E8D451B14201E0054EFAB /* AUUView.m */; };
-		C97E8D7F1B1456550054EFAB /* AUUDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = C97E8D7E1B1456550054EFAB /* AUUDebug.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C9B360361B16B9A50084D401 /* AUULabel.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B360341B16B9A50084D401 /* AUULabel.h */; };
-		C9B360371B16B9A50084D401 /* AUULabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B360351B16B9A50084D401 /* AUULabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,61 +87,63 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1C897B4E1B638B6C00549D49 /* AUULaunchGuidView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AUULaunchGuidView.h; path = Widget/AUULaunchGuidView.h; sourceTree = "<group>"; };
-		1C897B4F1B638B6C00549D49 /* AUULaunchGuidView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AUULaunchGuidView.m; path = Widget/AUULaunchGuidView.m; sourceTree = "<group>"; };
-		995319611B0B7BE50021704F /* AUUPlotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AUUPlotView.h; path = AUUKit/AUUPlotView.h; sourceTree = "<group>"; };
-		995319621B0B7BE50021704F /* AUUPlotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AUUPlotView.m; path = AUUKit/AUUPlotView.m; sourceTree = "<group>"; };
-		995319691B0B7C030021704F /* AUUColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AUUColor.h; path = AUUKit/AUUColor.h; sourceTree = "<group>"; };
-		9953196A1B0B7C030021704F /* AUUColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AUUColor.m; path = AUUKit/AUUColor.m; sourceTree = "<group>"; };
-		9953196D1B0B7F9E0021704F /* AUUImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AUUImage.h; path = AUUKit/AUUImage.h; sourceTree = "<group>"; };
-		9953196E1B0B7F9E0021704F /* AUUImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AUUImage.m; path = AUUKit/AUUImage.m; sourceTree = "<group>"; };
 		9961595A1B14B787009CD275 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		997F324B1B6E6DC3000B3F6A /* AUUDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUDebug.h; sourceTree = "<group>"; };
+		997F324D1B6E6DC3000B3F6A /* AUUColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUColor.h; sourceTree = "<group>"; };
+		997F324E1B6E6DC3000B3F6A /* AUUColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUUColor.m; sourceTree = "<group>"; };
+		997F324F1B6E6DC3000B3F6A /* AUUHandleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUHandleView.h; sourceTree = "<group>"; };
+		997F32501B6E6DC3000B3F6A /* AUUHandleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUUHandleView.m; sourceTree = "<group>"; };
+		997F32511B6E6DC3000B3F6A /* AUUImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUImage.h; sourceTree = "<group>"; };
+		997F32521B6E6DC3000B3F6A /* AUUImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUUImage.m; sourceTree = "<group>"; };
+		997F32531B6E6DC3000B3F6A /* AUUImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUImageView.h; sourceTree = "<group>"; };
+		997F32541B6E6DC3000B3F6A /* AUUImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUUImageView.m; sourceTree = "<group>"; };
+		997F32551B6E6DC3000B3F6A /* AUULabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUULabel.h; sourceTree = "<group>"; };
+		997F32561B6E6DC3000B3F6A /* AUULabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUULabel.m; sourceTree = "<group>"; };
+		997F32571B6E6DC3000B3F6A /* AUUPlotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUPlotView.h; sourceTree = "<group>"; };
+		997F32581B6E6DC3000B3F6A /* AUUPlotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUUPlotView.m; sourceTree = "<group>"; };
+		997F32591B6E6DC3000B3F6A /* AUUView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUView.h; sourceTree = "<group>"; };
+		997F325A1B6E6DC3000B3F6A /* AUUView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUUView.m; sourceTree = "<group>"; };
+		997F325B1B6E6DC3000B3F6A /* AUUKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUKit.h; sourceTree = "<group>"; };
+		997F325C1B6E6DC3000B3F6A /* AUUMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUMacro.h; sourceTree = "<group>"; };
+		997F325D1B6E6DC3000B3F6A /* AUUNotes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUNotes.h; sourceTree = "<group>"; };
+		997F325F1B6E6DC3000B3F6A /* AUUArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUArray.h; sourceTree = "<group>"; };
+		997F32601B6E6DC3000B3F6A /* AUUArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUUArray.m; sourceTree = "<group>"; };
+		997F32611B6E6DC3000B3F6A /* AUUDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUDate.h; sourceTree = "<group>"; };
+		997F32621B6E6DC3000B3F6A /* AUUDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUUDate.m; sourceTree = "<group>"; };
+		997F32631B6E6DC3000B3F6A /* AUUJSONAdaptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUJSONAdaptor.h; sourceTree = "<group>"; };
+		997F32641B6E6DC3000B3F6A /* AUUJSONAdaptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUUJSONAdaptor.m; sourceTree = "<group>"; };
+		997F32651B6E6DC3000B3F6A /* AUUMutableArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUMutableArray.h; sourceTree = "<group>"; };
+		997F32661B6E6DC3000B3F6A /* AUUMutableArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUUMutableArray.m; sourceTree = "<group>"; };
+		997F32671B6E6DC3000B3F6A /* AUUNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUNumber.h; sourceTree = "<group>"; };
+		997F32681B6E6DC3000B3F6A /* AUUNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUUNumber.m; sourceTree = "<group>"; };
+		997F32691B6E6DC3000B3F6A /* AUUString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUString.h; sourceTree = "<group>"; };
+		997F326A1B6E6DC3000B3F6A /* AUUString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUUString.m; sourceTree = "<group>"; };
+		997F326B1B6E6DC3000B3F6A /* AUUStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUStorage.h; sourceTree = "<group>"; };
+		997F326C1B6E6DC3000B3F6A /* AUUStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUUStorage.m; sourceTree = "<group>"; };
+		997F326E1B6E6DC3000B3F6A /* AUUDataEncryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUDataEncryption.h; sourceTree = "<group>"; };
+		997F326F1B6E6DC3000B3F6A /* AUUDataEncryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUUDataEncryption.m; sourceTree = "<group>"; };
+		997F32701B6E6DC3000B3F6A /* AUUStringEncryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUStringEncryption.h; sourceTree = "<group>"; };
+		997F32711B6E6DC3000B3F6A /* AUUStringEncryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUUStringEncryption.m; sourceTree = "<group>"; };
+		997F32731B6E6DC3000B3F6A /* AUUImageViewSyncCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUImageViewSyncCache.h; sourceTree = "<group>"; };
+		997F32741B6E6DC3000B3F6A /* AUUImageViewSyncCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUUImageViewSyncCache.m; sourceTree = "<group>"; };
+		997F32751B6E6DC3000B3F6A /* AUUNetworkHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUNetworkHandler.h; sourceTree = "<group>"; };
+		997F32761B6E6DC3000B3F6A /* AUUNetworkHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUUNetworkHandler.m; sourceTree = "<group>"; };
+		997F32771B6E6DC3000B3F6A /* AUUURLOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUURLOperation.h; sourceTree = "<group>"; };
+		997F32781B6E6DC3000B3F6A /* AUUURLOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUUURLOperation.m; sourceTree = "<group>"; };
+		997F327A1B6E6DC3000B3F6A /* AUUIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUIndicator.h; sourceTree = "<group>"; };
+		997F327B1B6E6DC3000B3F6A /* AUUIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUUIndicator.m; sourceTree = "<group>"; };
+		997F327C1B6E6DC3000B3F6A /* AUULaunchGuidView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUULaunchGuidView.h; sourceTree = "<group>"; };
+		997F327D1B6E6DC3000B3F6A /* AUULaunchGuidView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUULaunchGuidView.m; sourceTree = "<group>"; };
+		997F327E1B6E6DC3000B3F6A /* AUUPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUPopView.h; sourceTree = "<group>"; };
+		997F327F1B6E6DC3000B3F6A /* AUUPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUUPopView.m; sourceTree = "<group>"; };
+		997F32801B6E6DC3000B3F6A /* AUUProgressIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUProgressIndicator.h; sourceTree = "<group>"; };
+		997F32811B6E6DC3000B3F6A /* AUUProgressIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUUProgressIndicator.m; sourceTree = "<group>"; };
 		9991B0351B0A22DC00EC3210 /* AUUKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AUUKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9991B0391B0A22DC00EC3210 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9991B03A1B0A22DC00EC3210 /* AUUKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AUUKit.h; sourceTree = "<group>"; };
 		9991B0401B0A22DC00EC3210 /* AUUKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AUUKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9991B0461B0A22DC00EC3210 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9991B0471B0A22DC00EC3210 /* AUUKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AUUKitTests.m; sourceTree = "<group>"; };
-		9991B0521B0A23A500EC3210 /* AUUMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUMacro.h; sourceTree = "<group>"; };
-		9991B0531B0A23A500EC3210 /* AUUNotes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUNotes.h; sourceTree = "<group>"; };
-		999905191B135C70008B08A2 /* AUUString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUString.h; sourceTree = "<group>"; };
-		9999051A1B135C70008B08A2 /* AUUString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUUString.m; sourceTree = "<group>"; };
-		9999051D1B1371BE008B08A2 /* AUUNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUNumber.h; sourceTree = "<group>"; };
-		9999051E1B1371BE008B08A2 /* AUUNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUUNumber.m; sourceTree = "<group>"; };
-		99AC7B871B10E2F300B33FB4 /* AUUJSONAdaptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUJSONAdaptor.h; sourceTree = "<group>"; };
-		99AC7B881B10E2F300B33FB4 /* AUUJSONAdaptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUUJSONAdaptor.m; sourceTree = "<group>"; };
-		99AC7B8B1B11565800B33FB4 /* AUUArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUArray.h; sourceTree = "<group>"; };
-		99AC7B8C1B11565800B33FB4 /* AUUArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUUArray.m; sourceTree = "<group>"; };
-		99AC7B8F1B11582E00B33FB4 /* AUUMutableArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUMutableArray.h; sourceTree = "<group>"; };
-		99AC7B901B11582E00B33FB4 /* AUUMutableArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUUMutableArray.m; sourceTree = "<group>"; };
-		99AC7B931B115A9200B33FB4 /* AUUImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AUUImageView.h; path = AUUKit/AUUImageView.h; sourceTree = "<group>"; };
-		99AC7B941B115A9200B33FB4 /* AUUImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AUUImageView.m; path = AUUKit/AUUImageView.m; sourceTree = "<group>"; };
-		99AC7B981B11610000B33FB4 /* AUUURLOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AUUURLOperation.h; path = Network/AUUURLOperation.h; sourceTree = "<group>"; };
-		99AC7B991B11610000B33FB4 /* AUUURLOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AUUURLOperation.m; path = Network/AUUURLOperation.m; sourceTree = "<group>"; };
-		99BE86511B28834F00AE98AC /* AUUNetworkHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AUUNetworkHandler.h; path = Network/AUUNetworkHandler.h; sourceTree = "<group>"; };
-		99BE86521B28834F00AE98AC /* AUUNetworkHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AUUNetworkHandler.m; path = Network/AUUNetworkHandler.m; sourceTree = "<group>"; };
-		99BE86551B2944F000AE98AC /* AUUImageViewSyncCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AUUImageViewSyncCache.h; path = Network/AUUImageViewSyncCache.h; sourceTree = "<group>"; };
-		99BE86561B2944F000AE98AC /* AUUImageViewSyncCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AUUImageViewSyncCache.m; path = Network/AUUImageViewSyncCache.m; sourceTree = "<group>"; };
-		99BE865A1B294DC800AE98AC /* AUUPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AUUPopView.h; path = Widget/AUUPopView.h; sourceTree = "<group>"; };
-		99BE865B1B294DC800AE98AC /* AUUPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AUUPopView.m; path = Widget/AUUPopView.m; sourceTree = "<group>"; };
-		99BE865E1B2971D900AE98AC /* AUUProgressIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AUUProgressIndicator.h; path = Widget/AUUProgressIndicator.h; sourceTree = "<group>"; };
-		99BE865F1B2971D900AE98AC /* AUUProgressIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AUUProgressIndicator.m; path = Widget/AUUProgressIndicator.m; sourceTree = "<group>"; };
-		99BE86621B29921800AE98AC /* AUUIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AUUIndicator.h; path = Widget/AUUIndicator.h; sourceTree = "<group>"; };
-		99BE86631B29921800AE98AC /* AUUIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AUUIndicator.m; path = Widget/AUUIndicator.m; sourceTree = "<group>"; };
-		C94179661B155E6D002E490D /* AUUStringEncryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AUUStringEncryption.h; path = Encryption/AUUStringEncryption.h; sourceTree = "<group>"; };
-		C94179671B155E6D002E490D /* AUUStringEncryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AUUStringEncryption.m; path = Encryption/AUUStringEncryption.m; sourceTree = "<group>"; };
-		C941796A1B155F9D002E490D /* AUUDataEncryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AUUDataEncryption.h; path = Encryption/AUUDataEncryption.h; sourceTree = "<group>"; };
-		C941796B1B155F9D002E490D /* AUUDataEncryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AUUDataEncryption.m; path = Encryption/AUUDataEncryption.m; sourceTree = "<group>"; };
 		C95922781B0AD50400B9D1A3 /* AUUKit.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AUUKit.pch; sourceTree = "<group>"; };
-		C959231B1B0B404300B9D1A3 /* AUUDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUDate.h; sourceTree = "<group>"; };
-		C959231C1B0B404300B9D1A3 /* AUUDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUUDate.m; sourceTree = "<group>"; };
-		C97E8D3C1B1407EC0054EFAB /* AUUStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUStorage.h; sourceTree = "<group>"; };
-		C97E8D3D1B1407EC0054EFAB /* AUUStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUUStorage.m; sourceTree = "<group>"; };
-		C97E8D441B14201E0054EFAB /* AUUView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AUUView.h; path = AUUKit/AUUView.h; sourceTree = "<group>"; };
-		C97E8D451B14201E0054EFAB /* AUUView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AUUView.m; path = AUUKit/AUUView.m; sourceTree = "<group>"; };
-		C97E8D7E1B1456550054EFAB /* AUUDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUDebug.h; sourceTree = "<group>"; };
-		C9B360341B16B9A50084D401 /* AUULabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AUULabel.h; path = AUUKit/AUULabel.h; sourceTree = "<group>"; };
-		C9B360351B16B9A50084D401 /* AUULabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AUULabel.m; path = AUUKit/AUULabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,31 +166,109 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		995319601B0B7BB00021704F /* AUUKit */ = {
-			isa = PBXGroup;
-			children = (
-				995319611B0B7BE50021704F /* AUUPlotView.h */,
-				995319621B0B7BE50021704F /* AUUPlotView.m */,
-				C97E8D441B14201E0054EFAB /* AUUView.h */,
-				C97E8D451B14201E0054EFAB /* AUUView.m */,
-				995319691B0B7C030021704F /* AUUColor.h */,
-				9953196A1B0B7C030021704F /* AUUColor.m */,
-				9953196D1B0B7F9E0021704F /* AUUImage.h */,
-				9953196E1B0B7F9E0021704F /* AUUImage.m */,
-				99AC7B931B115A9200B33FB4 /* AUUImageView.h */,
-				99AC7B941B115A9200B33FB4 /* AUUImageView.m */,
-				C9B360341B16B9A50084D401 /* AUULabel.h */,
-				C9B360351B16B9A50084D401 /* AUULabel.m */,
-			);
-			name = AUUKit;
-			sourceTree = "<group>";
-		};
 		996159591B14B771009CD275 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				9961595A1B14B787009CD275 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		997F324A1B6E6DC3000B3F6A /* AUUKit */ = {
+			isa = PBXGroup;
+			children = (
+				997F324B1B6E6DC3000B3F6A /* AUUDebug.h */,
+				997F324C1B6E6DC3000B3F6A /* AUUKit */,
+				997F325B1B6E6DC3000B3F6A /* AUUKit.h */,
+				997F325C1B6E6DC3000B3F6A /* AUUMacro.h */,
+				997F325D1B6E6DC3000B3F6A /* AUUNotes.h */,
+				997F325E1B6E6DC3000B3F6A /* AUUObject */,
+				997F326B1B6E6DC3000B3F6A /* AUUStorage.h */,
+				997F326C1B6E6DC3000B3F6A /* AUUStorage.m */,
+				997F326D1B6E6DC3000B3F6A /* Encryption */,
+				997F32721B6E6DC3000B3F6A /* Network */,
+				997F32791B6E6DC3000B3F6A /* Widget */,
+			);
+			path = AUUKit;
+			sourceTree = "<group>";
+		};
+		997F324C1B6E6DC3000B3F6A /* AUUKit */ = {
+			isa = PBXGroup;
+			children = (
+				997F324D1B6E6DC3000B3F6A /* AUUColor.h */,
+				997F324E1B6E6DC3000B3F6A /* AUUColor.m */,
+				997F324F1B6E6DC3000B3F6A /* AUUHandleView.h */,
+				997F32501B6E6DC3000B3F6A /* AUUHandleView.m */,
+				997F32511B6E6DC3000B3F6A /* AUUImage.h */,
+				997F32521B6E6DC3000B3F6A /* AUUImage.m */,
+				997F32531B6E6DC3000B3F6A /* AUUImageView.h */,
+				997F32541B6E6DC3000B3F6A /* AUUImageView.m */,
+				997F32551B6E6DC3000B3F6A /* AUULabel.h */,
+				997F32561B6E6DC3000B3F6A /* AUULabel.m */,
+				997F32571B6E6DC3000B3F6A /* AUUPlotView.h */,
+				997F32581B6E6DC3000B3F6A /* AUUPlotView.m */,
+				997F32591B6E6DC3000B3F6A /* AUUView.h */,
+				997F325A1B6E6DC3000B3F6A /* AUUView.m */,
+			);
+			path = AUUKit;
+			sourceTree = "<group>";
+		};
+		997F325E1B6E6DC3000B3F6A /* AUUObject */ = {
+			isa = PBXGroup;
+			children = (
+				997F325F1B6E6DC3000B3F6A /* AUUArray.h */,
+				997F32601B6E6DC3000B3F6A /* AUUArray.m */,
+				997F32611B6E6DC3000B3F6A /* AUUDate.h */,
+				997F32621B6E6DC3000B3F6A /* AUUDate.m */,
+				997F32631B6E6DC3000B3F6A /* AUUJSONAdaptor.h */,
+				997F32641B6E6DC3000B3F6A /* AUUJSONAdaptor.m */,
+				997F32651B6E6DC3000B3F6A /* AUUMutableArray.h */,
+				997F32661B6E6DC3000B3F6A /* AUUMutableArray.m */,
+				997F32671B6E6DC3000B3F6A /* AUUNumber.h */,
+				997F32681B6E6DC3000B3F6A /* AUUNumber.m */,
+				997F32691B6E6DC3000B3F6A /* AUUString.h */,
+				997F326A1B6E6DC3000B3F6A /* AUUString.m */,
+			);
+			path = AUUObject;
+			sourceTree = "<group>";
+		};
+		997F326D1B6E6DC3000B3F6A /* Encryption */ = {
+			isa = PBXGroup;
+			children = (
+				997F326E1B6E6DC3000B3F6A /* AUUDataEncryption.h */,
+				997F326F1B6E6DC3000B3F6A /* AUUDataEncryption.m */,
+				997F32701B6E6DC3000B3F6A /* AUUStringEncryption.h */,
+				997F32711B6E6DC3000B3F6A /* AUUStringEncryption.m */,
+			);
+			path = Encryption;
+			sourceTree = "<group>";
+		};
+		997F32721B6E6DC3000B3F6A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				997F32731B6E6DC3000B3F6A /* AUUImageViewSyncCache.h */,
+				997F32741B6E6DC3000B3F6A /* AUUImageViewSyncCache.m */,
+				997F32751B6E6DC3000B3F6A /* AUUNetworkHandler.h */,
+				997F32761B6E6DC3000B3F6A /* AUUNetworkHandler.m */,
+				997F32771B6E6DC3000B3F6A /* AUUURLOperation.h */,
+				997F32781B6E6DC3000B3F6A /* AUUURLOperation.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		997F32791B6E6DC3000B3F6A /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				997F327A1B6E6DC3000B3F6A /* AUUIndicator.h */,
+				997F327B1B6E6DC3000B3F6A /* AUUIndicator.m */,
+				997F327C1B6E6DC3000B3F6A /* AUULaunchGuidView.h */,
+				997F327D1B6E6DC3000B3F6A /* AUULaunchGuidView.m */,
+				997F327E1B6E6DC3000B3F6A /* AUUPopView.h */,
+				997F327F1B6E6DC3000B3F6A /* AUUPopView.m */,
+				997F32801B6E6DC3000B3F6A /* AUUProgressIndicator.h */,
+				997F32811B6E6DC3000B3F6A /* AUUProgressIndicator.m */,
+			);
+			path = Widget;
 			sourceTree = "<group>";
 		};
 		9991B02B1B0A22DC00EC3210 = {
@@ -211,17 +293,7 @@
 		9991B0371B0A22DC00EC3210 /* AUUKit */ = {
 			isa = PBXGroup;
 			children = (
-				9991B0531B0A23A500EC3210 /* AUUNotes.h */,
-				9991B03A1B0A22DC00EC3210 /* AUUKit.h */,
-				C97E8D7E1B1456550054EFAB /* AUUDebug.h */,
-				9991B0521B0A23A500EC3210 /* AUUMacro.h */,
-				C97E8D3C1B1407EC0054EFAB /* AUUStorage.h */,
-				C97E8D3D1B1407EC0054EFAB /* AUUStorage.m */,
-				99BE86591B294CD500AE98AC /* Widget */,
-				C94179651B155D6D002E490D /* Encryption */,
-				99AC7B971B1160CA00B33FB4 /* Network */,
-				995319601B0B7BB00021704F /* AUUKit */,
-				9991B0541B0A23A500EC3210 /* AUUObject */,
+				997F324A1B6E6DC3000B3F6A /* AUUKit */,
 				9991B0381B0A22DC00EC3210 /* Supporting Files */,
 			);
 			path = AUUKit;
@@ -253,64 +325,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		9991B0541B0A23A500EC3210 /* AUUObject */ = {
-			isa = PBXGroup;
-			children = (
-				999905191B135C70008B08A2 /* AUUString.h */,
-				9999051A1B135C70008B08A2 /* AUUString.m */,
-				C959231B1B0B404300B9D1A3 /* AUUDate.h */,
-				C959231C1B0B404300B9D1A3 /* AUUDate.m */,
-				99AC7B871B10E2F300B33FB4 /* AUUJSONAdaptor.h */,
-				99AC7B881B10E2F300B33FB4 /* AUUJSONAdaptor.m */,
-				99AC7B8B1B11565800B33FB4 /* AUUArray.h */,
-				99AC7B8C1B11565800B33FB4 /* AUUArray.m */,
-				99AC7B8F1B11582E00B33FB4 /* AUUMutableArray.h */,
-				99AC7B901B11582E00B33FB4 /* AUUMutableArray.m */,
-				9999051D1B1371BE008B08A2 /* AUUNumber.h */,
-				9999051E1B1371BE008B08A2 /* AUUNumber.m */,
-			);
-			path = AUUObject;
-			sourceTree = "<group>";
-		};
-		99AC7B971B1160CA00B33FB4 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				99BE86551B2944F000AE98AC /* AUUImageViewSyncCache.h */,
-				99BE86561B2944F000AE98AC /* AUUImageViewSyncCache.m */,
-				99AC7B981B11610000B33FB4 /* AUUURLOperation.h */,
-				99AC7B991B11610000B33FB4 /* AUUURLOperation.m */,
-				99BE86511B28834F00AE98AC /* AUUNetworkHandler.h */,
-				99BE86521B28834F00AE98AC /* AUUNetworkHandler.m */,
-			);
-			name = Network;
-			sourceTree = "<group>";
-		};
-		99BE86591B294CD500AE98AC /* Widget */ = {
-			isa = PBXGroup;
-			children = (
-				99BE865A1B294DC800AE98AC /* AUUPopView.h */,
-				99BE865B1B294DC800AE98AC /* AUUPopView.m */,
-				99BE865E1B2971D900AE98AC /* AUUProgressIndicator.h */,
-				99BE865F1B2971D900AE98AC /* AUUProgressIndicator.m */,
-				99BE86621B29921800AE98AC /* AUUIndicator.h */,
-				99BE86631B29921800AE98AC /* AUUIndicator.m */,
-				1C897B4E1B638B6C00549D49 /* AUULaunchGuidView.h */,
-				1C897B4F1B638B6C00549D49 /* AUULaunchGuidView.m */,
-			);
-			name = Widget;
-			sourceTree = "<group>";
-		};
-		C94179651B155D6D002E490D /* Encryption */ = {
-			isa = PBXGroup;
-			children = (
-				C94179661B155E6D002E490D /* AUUStringEncryption.h */,
-				C94179671B155E6D002E490D /* AUUStringEncryption.m */,
-				C941796A1B155F9D002E490D /* AUUDataEncryption.h */,
-				C941796B1B155F9D002E490D /* AUUDataEncryption.m */,
-			);
-			name = Encryption;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -318,32 +332,33 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9999051B1B135C70008B08A2 /* AUUString.h in Headers */,
-				99AC7B911B11582E00B33FB4 /* AUUMutableArray.h in Headers */,
-				995319631B0B7BE50021704F /* AUUPlotView.h in Headers */,
-				9991B05B1B0A23A500EC3210 /* AUUNotes.h in Headers */,
-				99AC7B951B115A9200B33FB4 /* AUUImageView.h in Headers */,
-				99BE86571B2944F000AE98AC /* AUUImageViewSyncCache.h in Headers */,
-				9953196B1B0B7C030021704F /* AUUColor.h in Headers */,
-				99AC7B891B10E2F300B33FB4 /* AUUJSONAdaptor.h in Headers */,
-				99AC7B8D1B11565800B33FB4 /* AUUArray.h in Headers */,
-				C959231D1B0B404300B9D1A3 /* AUUDate.h in Headers */,
-				C97E8D7F1B1456550054EFAB /* AUUDebug.h in Headers */,
-				C941796C1B155F9D002E490D /* AUUDataEncryption.h in Headers */,
-				C9B360361B16B9A50084D401 /* AUULabel.h in Headers */,
-				C94179681B155E6D002E490D /* AUUStringEncryption.h in Headers */,
-				99BE865C1B294DC800AE98AC /* AUUPopView.h in Headers */,
-				C97E8D461B14201E0054EFAB /* AUUView.h in Headers */,
-				99BE86601B2971D900AE98AC /* AUUProgressIndicator.h in Headers */,
-				1C897B501B638B6C00549D49 /* AUULaunchGuidView.h in Headers */,
-				99BE86641B29921800AE98AC /* AUUIndicator.h in Headers */,
-				99BE86531B28834F00AE98AC /* AUUNetworkHandler.h in Headers */,
-				9953196F1B0B7F9E0021704F /* AUUImage.h in Headers */,
-				9999051F1B1371BE008B08A2 /* AUUNumber.h in Headers */,
-				99AC7B9A1B11610000B33FB4 /* AUUURLOperation.h in Headers */,
-				9991B03B1B0A22DC00EC3210 /* AUUKit.h in Headers */,
-				9991B05A1B0A23A500EC3210 /* AUUMacro.h in Headers */,
-				C97E8D3E1B1407EC0054EFAB /* AUUStorage.h in Headers */,
+				997F32891B6E6DC3000B3F6A /* AUUImageView.h in Headers */,
+				997F32A61B6E6DC3000B3F6A /* AUUImageViewSyncCache.h in Headers */,
+				997F32931B6E6DC3000B3F6A /* AUUNotes.h in Headers */,
+				997F32B01B6E6DC3000B3F6A /* AUUPopView.h in Headers */,
+				997F32B21B6E6DC3000B3F6A /* AUUProgressIndicator.h in Headers */,
+				997F32831B6E6DC3000B3F6A /* AUUColor.h in Headers */,
+				997F32851B6E6DC3000B3F6A /* AUUHandleView.h in Headers */,
+				997F32A41B6E6DC3000B3F6A /* AUUStringEncryption.h in Headers */,
+				997F32871B6E6DC3000B3F6A /* AUUImage.h in Headers */,
+				997F32AA1B6E6DC3000B3F6A /* AUUURLOperation.h in Headers */,
+				997F329C1B6E6DC3000B3F6A /* AUUNumber.h in Headers */,
+				997F32A81B6E6DC3000B3F6A /* AUUNetworkHandler.h in Headers */,
+				997F32821B6E6DC3000B3F6A /* AUUDebug.h in Headers */,
+				997F32921B6E6DC3000B3F6A /* AUUMacro.h in Headers */,
+				997F32AE1B6E6DC3000B3F6A /* AUULaunchGuidView.h in Headers */,
+				997F32AC1B6E6DC3000B3F6A /* AUUIndicator.h in Headers */,
+				997F32911B6E6DC3000B3F6A /* AUUKit.h in Headers */,
+				997F32981B6E6DC3000B3F6A /* AUUJSONAdaptor.h in Headers */,
+				997F32A01B6E6DC3000B3F6A /* AUUStorage.h in Headers */,
+				997F329A1B6E6DC3000B3F6A /* AUUMutableArray.h in Headers */,
+				997F328F1B6E6DC3000B3F6A /* AUUView.h in Headers */,
+				997F328D1B6E6DC3000B3F6A /* AUUPlotView.h in Headers */,
+				997F32961B6E6DC3000B3F6A /* AUUDate.h in Headers */,
+				997F329E1B6E6DC3000B3F6A /* AUUString.h in Headers */,
+				997F32941B6E6DC3000B3F6A /* AUUArray.h in Headers */,
+				997F32A21B6E6DC3000B3F6A /* AUUDataEncryption.h in Headers */,
+				997F328B1B6E6DC3000B3F6A /* AUULabel.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,28 +478,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9B360371B16B9A50084D401 /* AUULabel.m in Sources */,
-				C941796D1B155F9D002E490D /* AUUDataEncryption.m in Sources */,
-				995319641B0B7BE50021704F /* AUUPlotView.m in Sources */,
-				99BE86541B28834F00AE98AC /* AUUNetworkHandler.m in Sources */,
-				1C897B511B638B6C00549D49 /* AUULaunchGuidView.m in Sources */,
-				C959231E1B0B404300B9D1A3 /* AUUDate.m in Sources */,
-				99AC7B9B1B11610000B33FB4 /* AUUURLOperation.m in Sources */,
-				99BE86611B2971D900AE98AC /* AUUProgressIndicator.m in Sources */,
-				99AC7B921B11582E00B33FB4 /* AUUMutableArray.m in Sources */,
-				C97E8D3F1B1407EC0054EFAB /* AUUStorage.m in Sources */,
-				99AC7B8E1B11565800B33FB4 /* AUUArray.m in Sources */,
-				995319701B0B7F9E0021704F /* AUUImage.m in Sources */,
-				99BE86581B2944F000AE98AC /* AUUImageViewSyncCache.m in Sources */,
-				9999051C1B135C70008B08A2 /* AUUString.m in Sources */,
-				9953196C1B0B7C030021704F /* AUUColor.m in Sources */,
-				99AC7B8A1B10E2F300B33FB4 /* AUUJSONAdaptor.m in Sources */,
-				C97E8D471B14201E0054EFAB /* AUUView.m in Sources */,
-				99BE86651B29921800AE98AC /* AUUIndicator.m in Sources */,
-				C94179691B155E6D002E490D /* AUUStringEncryption.m in Sources */,
-				999905201B1371BE008B08A2 /* AUUNumber.m in Sources */,
-				99AC7B961B115A9200B33FB4 /* AUUImageView.m in Sources */,
-				99BE865D1B294DC800AE98AC /* AUUPopView.m in Sources */,
+				997F32B11B6E6DC3000B3F6A /* AUUPopView.m in Sources */,
+				997F32971B6E6DC3000B3F6A /* AUUDate.m in Sources */,
+				997F32A11B6E6DC3000B3F6A /* AUUStorage.m in Sources */,
+				997F328C1B6E6DC3000B3F6A /* AUULabel.m in Sources */,
+				997F32A91B6E6DC3000B3F6A /* AUUNetworkHandler.m in Sources */,
+				997F32901B6E6DC3000B3F6A /* AUUView.m in Sources */,
+				997F32AF1B6E6DC3000B3F6A /* AUULaunchGuidView.m in Sources */,
+				997F32AD1B6E6DC3000B3F6A /* AUUIndicator.m in Sources */,
+				997F32861B6E6DC3000B3F6A /* AUUHandleView.m in Sources */,
+				997F329B1B6E6DC3000B3F6A /* AUUMutableArray.m in Sources */,
+				997F32B31B6E6DC3000B3F6A /* AUUProgressIndicator.m in Sources */,
+				997F32881B6E6DC3000B3F6A /* AUUImage.m in Sources */,
+				997F32A31B6E6DC3000B3F6A /* AUUDataEncryption.m in Sources */,
+				997F32A71B6E6DC3000B3F6A /* AUUImageViewSyncCache.m in Sources */,
+				997F32991B6E6DC3000B3F6A /* AUUJSONAdaptor.m in Sources */,
+				997F328A1B6E6DC3000B3F6A /* AUUImageView.m in Sources */,
+				997F32841B6E6DC3000B3F6A /* AUUColor.m in Sources */,
+				997F329F1B6E6DC3000B3F6A /* AUUString.m in Sources */,
+				997F328E1B6E6DC3000B3F6A /* AUUPlotView.m in Sources */,
+				997F32A51B6E6DC3000B3F6A /* AUUStringEncryption.m in Sources */,
+				997F329D1B6E6DC3000B3F6A /* AUUNumber.m in Sources */,
+				997F32AB1B6E6DC3000B3F6A /* AUUURLOperation.m in Sources */,
+				997F32951B6E6DC3000B3F6A /* AUUArray.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
