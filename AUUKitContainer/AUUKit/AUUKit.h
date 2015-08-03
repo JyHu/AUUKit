@@ -1,43 +1,36 @@
 //
 //  AUUKit.h
-//  AUUKit
+//  AUUKitContainer
 //
-//  Created by 胡金友 on 15/5/18.
-//  Copyright (c) 2015年 胡金友. All rights reserved.
+//  Created by 胡金友 on 15/8/3.
+//  Copyright (c) 2015年 北京爱康泰科技有限责任公司. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#ifndef AUUKitContainer_AUUKit_h
+#define AUUKitContainer_AUUKit_h
 
-//! Project version number for AUUKit.
-FOUNDATION_EXPORT double AUUKitVersionNumber;
+#import "AUUDebug.h"
+#import "AUUMacro.h"
 
-//! Project version string for AUUKit.
-FOUNDATION_EXPORT const unsigned char AUUKitVersionString[];
+#import "AUUColor.h"
+#import "AUUImage.h"
+#import "AUUImageView.h"
+#import "AUULabel.h"
+#import "AUUPlotView.h"
+#import "AUUView.h"
 
-// In this header, you should import all the public headers of your framework using statements like #import <AUUKit/PublicHeader.h>
+#import "AUUArray.h"
+#import "AUUDate.h"
+#import "AUUJSONAdaptor.h"
+#import "AUUMutableArray.h"
+#import "AUUNumber.h"
+#import "AUUString.h"
 
+#import "AUUDataEncryption.h"
+#import "AUUStringEncryption.h"
 
-#import <AUUKit/AUUString.h>
-#import <AUUKit/AUUDate.h>
-#import <AUUKit/AUUJSONAdaptor.h>
-#import <AUUKit/AUUArray.h>
-#import <AUUKit/AUUMutableArray.h>
-#import <AUUKit/AUUNumber.h>
+#import "AUUIndicator.h"
+#import "AUULaunchGuidView.h"
+#import "AUUPopView.h"
 
-#import <AUUKit/AUUPlotView.h>
-#import <AUUKit/AUUColor.h>
-#import <AUUKit/AUUView.h>
-#import <AUUKit/AUUImageView.h>
-#import <AUUKit/AUUImage.h>
-
-#import <AUUKit/AUUNetworkHandler.h>
-
-#import <AUUKit/AUUPopView.h>
-#import <AUUKit/AUUProgressIndicator.h>
-#import <AUUKit/AUUIndicator.h>
-
-#import <AUUKit/AUUStringEncryption.h>
-#import <AUUKit/AUUDataEncryption.h>
-
-
-#import <AUUKit/AUUDebug.h>
+#endif

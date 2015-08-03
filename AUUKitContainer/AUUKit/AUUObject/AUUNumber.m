@@ -21,7 +21,9 @@ BOOL doubleEqual(double d1, double d2)
 
 NSUInteger generalInteger(NSUInteger start, NSUInteger end)
 {
-    return arc4random()%(end - start) + start;
+    uint32_t t = (uint32_t)((end > start) ? (end - start) : (start - end));
+    
+    return arc4random_uniform(t) + start;
 }
 
 NSUInteger bitUpdate(NSUInteger num, NSUInteger fIndex, NSUInteger length, NSUInteger value)

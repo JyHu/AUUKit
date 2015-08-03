@@ -7,10 +7,6 @@
 //
 
 #import "AUUImageView.h"
-#import "AUUStorage.h"
-#import "AUUImageViewSyncCache.h"
-
-static NSString *imageCachePath = @"Library/Caches/Image/Common";
 
 @implementation UIImageView (AUUImageView)
 
@@ -24,19 +20,5 @@ static NSString *imageCachePath = @"Library/Caches/Image/Common";
     return [[UIImageView alloc] initWithImage:image highlightedImage:highlightedImage];
 }
 
-- (void)setImageWithURLString:(NSString *)urlString
-{
-    [[AUUImageViewSyncCache shareCache] setImageWithImageView:self andURLString:urlString];
-}
-
-+ (NSString *)imageCachePath
-{
-    return [NSHomeDirectory() stringByAppendingPathComponent:imageCachePath];
-}
-
-+ (void)setDefaultImage:(UIImage *)image
-{
-    [AUUStorage shareStorage].imageViewDefaultImage = image;
-}
 
 @end

@@ -8,6 +8,7 @@
 
 #import "AUUPlotView.h"
 #import "AUUColor.h"
+#import "AUUMacro.h"
 
 @implementation UIView(AUUPlotView)
 

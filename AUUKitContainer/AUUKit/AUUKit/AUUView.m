@@ -9,19 +9,12 @@
 #import "AUUView.h"
 #import <objc/runtime.h>
 #import "AUUNumber.h"
-#import "AUUStorage.h"
 
 static void * pDurationWhenFrameChangedKey      = (void *)@"pDurationWhenFrameChangedKey";
+static void * pNeedAnimationWhenFrameChangedKey = (void *)@"pNeedAnimationWhenFrameChangedKey";
+CGFloat const defaultViewAnimationDuration = 0.35;
 
 @implementation UIView(AUUView)
-
-
-#pragma mark - Associative
-
-+ (void)setDefaultAllViewAnimationDuration:(NSTimeInterval)duration
-{
-    kShareStorage.defaultViewAnimationDuration = duration;
-}
 
 + (instancetype)instance
 {
@@ -35,12 +28,12 @@ static void * pDurationWhenFrameChangedKey      = (void *)@"pDurationWhenFrameCh
 
 - (id)initialization
 {
-    return [self initWithDuration:kShareStorage.defaultViewAnimationDuration];
+    return [self initWithDuration:defaultViewAnimationDuration];
 }
 
 - (id)initializationWithFrame:(CGRect)frame
 {
-    return [self initWithDuration:kShareStorage.defaultViewAnimationDuration frame:frame];
+    return [self initWithDuration:defaultViewAnimationDuration frame:frame];
 }
 
 - (id)initWithDuration:(NSTimeInterval)duration
@@ -49,7 +42,8 @@ static void * pDurationWhenFrameChangedKey      = (void *)@"pDurationWhenFrameCh
     
     if (self)
     {
-        self.durationWhenFrameChanged = (duration <= 0 ? 0 : duration);
+        self.needAnimationWhenFrameChange = (duration > 0);
+        self.animationDurationWhenFrameChanged = (duration <= 0 ? 0 : duration);
     }
     
     return self;
@@ -67,14 +61,11 @@ static void * pDurationWhenFrameChangedKey      = (void *)@"pDurationWhenFrameCh
     return self;
 }
 
-+ (void)setViewNeedsAnimation:(BOOL)needs
+- (void)setAnimationDurationWhenFrameChanged:(NSTimeInterval)animationDurationWhenFrameChanged
 {
-    kShareStorage.needAllViewAnimation = needs;
-}
-
-- (void)setDurationWhenFrameChanged:(NSTimeInterval)durationWhenFrameChanged
-{
-    NSTimeInterval duration = durationWhenFrameChanged >= 0 ? durationWhenFrameChanged : 0;
+    NSTimeInterval duration = animationDurationWhenFrameChanged >= 0 ? animationDurationWhenFrameChanged : 0;
+    
+    self.needAnimationWhenFrameChange = duration > 0;
     
     objc_setAssociatedObject(self,
                              pDurationWhenFrameChangedKey,
@@ -82,9 +73,22 @@ static void * pDurationWhenFrameChangedKey      = (void *)@"pDurationWhenFrameCh
                              OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (NSTimeInterval)durationWhenFrameChanged
+- (NSTimeInterval)animationDurationWhenFrameChanged
 {
     return [objc_getAssociatedObject(self, pDurationWhenFrameChangedKey) floatValue];
+}
+
+- (void)setNeedAnimationWhenFrameChange:(BOOL)needAnimationWhenFrameChange
+{
+    objc_setAssociatedObject(self,
+                             pNeedAnimationWhenFrameChangedKey,
+                             @(needAnimationWhenFrameChange),
+                             OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (BOOL)needAnimationWhenFrameChange
+{
+    return [objc_getAssociatedObject(self, pNeedAnimationWhenFrameChangedKey) boolValue];
 }
 
 #pragma mark - Frame 操作
@@ -171,14 +175,14 @@ static void * pDurationWhenFrameChangedKey      = (void *)@"pDurationWhenFrameCh
     [self resetFrame:rect];
 }
 
-- (CGRect)rect
+- (CGRect)animationRect
 {
     return self.frame;
 }
 
-- (void)setRect:(CGRect)rect
+- (void)setAnimationRect:(CGRect)animationRect
 {
-    [self resetFrame:rect];
+    [self resetFrame:animationRect];
 }
 
 - (void)setIncreaseHeight:(CGFloat)increaseHeight
@@ -244,18 +248,11 @@ static void * pDurationWhenFrameChangedKey      = (void *)@"pDurationWhenFrameCh
 
 - (void)resetFrame:(CGRect)rect
 {
-    if (kShareStorage.needAllViewAnimation)
+    if (self.needAnimationWhenFrameChange)
     {
-        if (!doubleEqual(self.durationWhenFrameChanged, 0))
-        {
-            [UIView animateWithDuration:self.durationWhenFrameChanged animations:^{
-                self.frame = rect;
-            }];
-        }
-        else
-        {
+        [UIView animateWithDuration:self.animationDurationWhenFrameChanged animations:^{
             self.frame = rect;
-        }
+        }];
     }
     else
     {

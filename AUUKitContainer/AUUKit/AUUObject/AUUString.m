@@ -10,32 +10,30 @@
 #import <objc/runtime.h>
 #import <CommonCrypto/CommonDigest.h>
 #import <sys/utsname.h>
+#import "AUUMacro.h"
 
 NSString *const kAUUReverseStringKey = @"kAUUReverseStringKey";
 
 @implementation NSString(AUUString)
 
 
-- (CGSize)sizeWithBounding:(CGSize)size font:(UIFont *)font
+- (CGSize)sizeWithContainSize:(CGSize)size font:(UIFont *)font
 {
-    NSDictionary *dict = @{NSFontAttributeName : font};
-    
-    return [self sizeWithBounding:size attributes:dict];
+    return [self sizeWithContain:size attributes:@{NSFontAttributeName : font}];
 }
 
-- (CGSize)sizeWithBounding:(CGSize)size attributes:(NSDictionary *)attributes
+- (CGSize)sizeWithContain:(CGSize)size attributes:(NSDictionary *)attributes
+{
+    return [self sizeWithContain:size attributes:attributes options:NSStringDrawingUsesLineFragmentOrigin];
+}
+
+- (CGSize)sizeWithContain:(CGSize)size attributes:(NSDictionary *)attributes options:(NSStringDrawingOptions)options
 {
     CGSize constriantSize;
     
-    kAUUCallB7TAPI(
-                   UIFont *font = [attributes objectForKey:NSFontAttributeName];
-                   constriantSize = [self sizeWithFont:font constrainedToSize:size];
-                   ,
-                   constriantSize = [self boundingRectWithSize:size
-                                                       options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading
-                                                    attributes:attributes
-                                                       context:nil].size;
-                   )
+    NSMutableAttributedString *countAttrString = [[NSMutableAttributedString alloc] initWithString:self];
+    constriantSize = [countAttrString boundingRectWithSize:size options:options context:nil].size;
+    
     return constriantSize;
 }
 
@@ -60,22 +58,6 @@ NSString *const kAUUReverseStringKey = @"kAUUReverseStringKey";
     
     return handleResString;
     
-}
-
-- (id)objectForKeyedSubscript:(id<NSCopying>)paramKey
-{
-    NSObject<NSCopying> *keyAsObject = (NSObject<NSCopying> *)paramKey;
-    
-    if ([keyAsObject isKindOfClass:[NSString class]] || [keyAsObject isKindOfClass:[NSMutableString class]])
-    {
-        NSString *keyAsString = (NSString *)keyAsObject;
-        
-        if ([keyAsString isEqualToString:kAUUReverseStringKey])
-        {
-            return [self reverseString];
-        }
-    }
-    return nil;
 }
 
 - (NSURL *)toURL
@@ -124,9 +106,13 @@ NSString *const kAUUReverseStringKey = @"kAUUReverseStringKey";
     
     NSMutableString *chString = [[NSMutableString alloc] initWithString:@""];
     
-    if (elements & AUUStringGeneralElementWithEnglishCharacter)
+    
+    if (elements & AUUStringGeneralElementWithCapitalEnglishCharacter)
     {
         [chString appendString:upCaseENChar];
+    }
+    if (elements & AUUStringGeneralElementWithLowerCaseEnglishCharacter)
+    {
         [chString appendString:loCaseENChar];
     }
     if (elements & AUUStringGeneralElementWithNumber)
@@ -266,6 +252,12 @@ NSString *const kAUUReverseStringKey = @"kAUUReverseStringKey";
     }
     
     return nil;
+}
+
+- (NSString *)firstCharacter
+{
+    NSString *enStr = [self transformStringWithType:AUUStringTransformStripDiacritics];
+    return enStr[0];
 }
 
 + (NSString *)generateUniqueIdentifier

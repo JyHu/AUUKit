@@ -13,16 +13,9 @@
 #define kScreenWidth (kScreenSize.width)
 #define kScreenHeight (kScreenSize.height)
 
-@interface UIView(AUUView)
+extern CGFloat const defaultViewAnimationDuration;
 
-/**
- *  @author JyHu, 15-05-30 15:05:43
- *
- *  设置默认的动画时间
- *
- *  @param duration 动画时间
- */
-+ (void)setDefaultAllViewAnimationDuration:(NSTimeInterval)duration;
+@interface UIView(AUUView)
 
 /**
  *  @author JyHu, 15-06-11 17:06:35
@@ -65,15 +58,6 @@
 - (id)initializationWithFrame:(CGRect)frame;
 
 /**
- *  @author JyHu, 15-05-30 15:05:17
- *
- *  整体设置是否需要view变换的动画
- *
- *  @param needs 是否需要动画
- */
-+ (void)setViewNeedsAnimation:(BOOL)needs;
-
-/**
  *  @author JyHu, 15-05-26 00:05:18
  *
  *  初始化方法
@@ -101,7 +85,16 @@
  *
  *  @brief  如果需要过渡动画，设置过渡动画的时间，为0即为不要动画
  */
-@property (assign, nonatomic) NSTimeInterval durationWhenFrameChanged;
+@property (assign, nonatomic) NSTimeInterval animationDurationWhenFrameChanged;
+
+/**
+ *  @author JyHu, 15-08-03 11:08:12
+ *
+ *  是否需要过渡动画，如果设置的动画时间是个正数，默认的是需要
+ *
+ *  @since  v 1.0
+ */
+@property (assign, nonatomic) BOOL needAnimationWhenFrameChange;
 
 /**
  *  @author JyHu, 15-05-22 17:05:58
@@ -164,7 +157,7 @@
  *
  *  获取、设置控件的frame
  */
-@property (assign, nonatomic) CGRect rect;
+@property (assign, nonatomic) CGRect animationRect;
 
 /**
  *  @author JyHu, 15-05-22 17:05:57
@@ -251,6 +244,13 @@
                borderWidth:(CGFloat)borderWidth
               cornerRadius:(CGFloat)cornerRadius;
 
+/**
+ *  @author JyHu, 15-08-03 11:08:19
+ *
+ *  移除所有的子视图
+ *
+ *  @since  v 1.0
+ */
 - (void)removeAllSubViews;
 
 @end

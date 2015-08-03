@@ -8,6 +8,7 @@
 
 #import "AUUDate.h"
 #import "AUUString.h"
+#import "AUUMacro.h"
 
 #define kAUULunarCalendarMinYear (1900)
 #define kAUULunarCalendarMaxYear (2049)
@@ -44,14 +45,17 @@ NSTimeInterval const AUUWeeksSeconds = AUUDaysSeconds * 7;
 
     NSInteger unitFlag;
     
-
-    kAUUCallB8TAPI(
-                   unitFlag = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit | NSWeekdayCalendarUnit | NSWeekdayOrdinalCalendarUnit | NSQuarterCalendarUnit | NSWeekOfMonthCalendarUnit | NSWeekOfYearCalendarUnit;
-                   ,
-                   
-                   unitFlag = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond | NSCalendarUnitWeekday | NSCalendarUnitWeekdayOrdinal | NSCalendarUnitQuarter | NSCalendarUnitWeekOfMonth | NSCalendarUnitWeekOfYear;
-                   
-                   )
+    if (kVERSION_UP_TO_8)
+    {
+        unitFlag = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond | NSCalendarUnitWeekday | NSCalendarUnitWeekdayOrdinal | NSCalendarUnitQuarter | NSCalendarUnitWeekOfMonth | NSCalendarUnitWeekOfYear;
+    }
+    else
+    {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+        unitFlag = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit | NSWeekdayCalendarUnit | NSWeekdayOrdinalCalendarUnit | NSQuarterCalendarUnit | NSWeekOfMonthCalendarUnit | NSWeekOfYearCalendarUnit;
+#pragma clang diagnostic pop
+    }
     
     NSDateComponents *comp = [calendar components:unitFlag fromDate:self];
 
@@ -60,7 +64,21 @@ NSTimeInterval const AUUWeeksSeconds = AUUDaysSeconds * 7;
 
 - (NSRange)dateRangeBetweenMonthAndDay
 {
-    NSCalendar *currentCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSString *gregorian;
+    
+    if (kVERSION_UP_TO_8)
+    {
+        gregorian = NSCalendarIdentifierGregorian;
+    }
+    else
+    {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+        gregorian = NSGregorianCalendar;
+#pragma clang diagnostic pop
+    }
+    
+    NSCalendar *currentCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:gregorian];
     [currentCalendar setFirstWeekday:1];
     [currentCalendar setMinimumDaysInFirstWeek:7];
     

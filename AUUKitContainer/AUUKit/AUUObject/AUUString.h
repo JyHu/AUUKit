@@ -7,11 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 typedef enum : NSUInteger {
-    AUUStringGeneralElementWithEnglishCharacter     = 1 << 0,   // 英文字符
-    AUUStringGeneralElementWithNumber               = 1 << 1,   // 数字
-    AUUStringGeneralElementWithSpecialCharacter     = 1 << 2,   // 其他特殊字符
+    AUUStringGeneralElementWithCapitalEnglishCharacter      = 1 << 0,   // 大写字母
+    AUUStringGeneralElementWithLowerCaseEnglishCharacter    = 1 << 1,   // 小写字母
+    AUUStringGeneralElementWithNumber                       = 1 << 2,   // 数字
+    AUUStringGeneralElementWithSpecialCharacter             = 1 << 3,   // 其他特殊字符
 } AUUStringGeneralElement;
 
 typedef NS_ENUM(NSUInteger, AUUStringTransform) {
@@ -48,7 +50,7 @@ extern NSString *const kAUUReverseStringKey;
  *
  *  @return CGSize
  */
-- (CGSize)sizeWithBounding:(CGSize)size font:(UIFont *)font;
+- (CGSize)sizeWithContainSize:(CGSize)size font:(UIFont *)font;
 
 /**
  *  @author JyHu, 15-05-19 14:05:08
@@ -60,7 +62,22 @@ extern NSString *const kAUUReverseStringKey;
  *
  *  @return CGSize
  */
-- (CGSize)sizeWithBounding:(CGSize)size attributes:(NSDictionary *)attributes;
+- (CGSize)sizeWithContain:(CGSize)size attributes:(NSDictionary *)attributes;
+
+/**
+ *  @author JyHu, 15-08-03 10:08:01
+ *
+ *  计算字符串所占的空间
+ *
+ *  @param size       外围最大的控制size
+ *  @param attributes 字体的富文本属性
+ *  @param options    字体的计算模式
+ *
+ *  @return CGSize
+ *
+ *  @since  v 1.0
+ */
+- (CGSize)sizeWithContain:(CGSize)size attributes:(NSDictionary *)attributes options:(NSStringDrawingOptions)options;
 
 /**
  *  @author JyHu, 15-05-19 14:05:16
@@ -72,17 +89,6 @@ extern NSString *const kAUUReverseStringKey;
  *  @return NSString ， 一个字符
  */
 - (id)objectAtIndexedSubscript:(NSUInteger)paramIndex;
-
-/**
- *  @author JyHu, 15-05-19 15:05:19
- *
- *  @brief  给字符串扩充字典类似的属性
- *
- *  @param paramKey key
- *
- *  @return value
- */
-- (id)objectForKeyedSubscript:(id<NSCopying>)paramKey;
 
 /**
  *  @author JyHu, 15-05-19 15:05:48
@@ -184,6 +190,17 @@ extern NSString *const kAUUReverseStringKey;
  *  @return 转码后的字符串
  */
 - (NSString *)transformStringWithType:(AUUStringTransform)transformType;
+
+/**
+ *  @author JyHu, 15-08-03 10:08:56
+ *
+ *  取得当前字符串的首字母，适合中文字符串
+ *
+ *  @return 字母
+ *
+ *  @since  v 1.0
+ */
+- (NSString *)firstCharacter;
 
 /**
  *  @author JyHu, 15-05-26 15:05:19
