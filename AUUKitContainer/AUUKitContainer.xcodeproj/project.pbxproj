@@ -24,6 +24,7 @@
 		1C9EF6341B6EFE5600074FD5 /* AUUIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9EF61A1B6EFE5600074FD5 /* AUUIndicator.m */; };
 		1C9EF6351B6EFE5600074FD5 /* AUULaunchGuidView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9EF61C1B6EFE5600074FD5 /* AUULaunchGuidView.m */; };
 		1C9EF6361B6EFE5600074FD5 /* AUUPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9EF61E1B6EFE5600074FD5 /* AUUPopView.m */; };
+		1C9EF63C1B6F462200074FD5 /* AUUStepMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9EF63B1B6F462200074FD5 /* AUUStepMenu.m */; };
 		998B365B1B2450E4006A624F /* TestDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 998B365A1B2450E4006A624F /* TestDrawView.m */; };
 		C97E8D9D1B1474570054EFAB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C97E8D9C1B1474570054EFAB /* main.m */; };
 		C97E8DA01B1474570054EFAB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C97E8D9F1B1474570054EFAB /* AppDelegate.m */; };
@@ -95,6 +96,8 @@
 		1C9EF61D1B6EFE5600074FD5 /* AUUPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUPopView.h; sourceTree = "<group>"; };
 		1C9EF61E1B6EFE5600074FD5 /* AUUPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUUPopView.m; sourceTree = "<group>"; };
 		1C9EF6381B6F3D6600074FD5 /* AUUKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AUUKit.h; sourceTree = "<group>"; };
+		1C9EF63A1B6F462200074FD5 /* AUUStepMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AUUStepMenu.h; path = StepMenu/AUUStepMenu.h; sourceTree = "<group>"; };
+		1C9EF63B1B6F462200074FD5 /* AUUStepMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AUUStepMenu.m; path = StepMenu/AUUStepMenu.m; sourceTree = "<group>"; };
 		998B36591B2450E4006A624F /* TestDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestDrawView.h; sourceTree = "<group>"; };
 		998B365A1B2450E4006A624F /* TestDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestDrawView.m; sourceTree = "<group>"; };
 		C97E8D971B1474570054EFAB /* AUUKitContainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AUUKitContainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -202,8 +205,18 @@
 				1C9EF61C1B6EFE5600074FD5 /* AUULaunchGuidView.m */,
 				1C9EF61D1B6EFE5600074FD5 /* AUUPopView.h */,
 				1C9EF61E1B6EFE5600074FD5 /* AUUPopView.m */,
+				1C9EF6391B6F45E300074FD5 /* StepMenu */,
 			);
 			path = Widget;
+			sourceTree = "<group>";
+		};
+		1C9EF6391B6F45E300074FD5 /* StepMenu */ = {
+			isa = PBXGroup;
+			children = (
+				1C9EF63A1B6F462200074FD5 /* AUUStepMenu.h */,
+				1C9EF63B1B6F462200074FD5 /* AUUStepMenu.m */,
+			);
+			name = StepMenu;
 			sourceTree = "<group>";
 		};
 		C97E8D8E1B1474570054EFAB = {
@@ -383,6 +396,7 @@
 				1C9EF62D1B6EFE5600074FD5 /* AUUString.m in Sources */,
 				1C9EF6301B6EFE5600074FD5 /* AUUStringEncryption.m in Sources */,
 				1C9EF62B1B6EFE5600074FD5 /* AUUMutableArray.m in Sources */,
+				1C9EF63C1B6F462200074FD5 /* AUUStepMenu.m in Sources */,
 				1C9EF62C1B6EFE5600074FD5 /* AUUNumber.m in Sources */,
 				1C9EF62F1B6EFE5600074FD5 /* AUUDataEncryption.m in Sources */,
 				1C9EF62A1B6EFE5600074FD5 /* AUUJSONAdaptor.m in Sources */,

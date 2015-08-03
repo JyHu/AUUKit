@@ -160,6 +160,15 @@ extern CGFloat const defaultViewAnimationDuration;
 @property (assign, nonatomic) CGRect animationRect;
 
 /**
+ *  @author JyHu, 15-08-03 15:08:12
+ *
+ *  起点在(0,0)的frame
+ *
+ *  @since  v 1.0
+ */
+@property (assign, nonatomic, readonly) CGRect tinyFrame;
+
+/**
  *  @author JyHu, 15-05-22 17:05:57
  *
  *  @brief  增加控件的高度

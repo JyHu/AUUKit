@@ -16,16 +16,6 @@ typedef struct AUULocation AUULocation;
 
 AUULocation AUULocationMake(CGFloat x, CGFloat y);
 
-AUULocation AUULocationMake(CGFloat x, CGFloat y)
-{
-    AUULocation location;
-    
-    location.x = x;
-    location.y = y;
-    
-    return location;
-}
-
 @interface UIView(AUUPlotView)
 
 /**

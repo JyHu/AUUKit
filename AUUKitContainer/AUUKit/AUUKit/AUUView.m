@@ -185,6 +185,13 @@ CGFloat const defaultViewAnimationDuration = 0.35;
     [self resetFrame:animationRect];
 }
 
+- (CGRect)tinyFrame
+{
+    CGRect rect = self.frame;
+    rect.origin = CGPointZero;
+    return rect;
+}
+
 - (void)setIncreaseHeight:(CGFloat)increaseHeight
 {
     CGRect rect = self.frame;

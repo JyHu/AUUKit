@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "TestDrawView.h"
+#import "AUUStepMenu.h"
 
 @interface ViewController ()
 
@@ -72,6 +73,14 @@
 //
 //    UISwitch *s = [UISwitch instance];
 //    NSLog(@"%@", NSStringFromClass([s class]));
+    
+    NSArray *datasource = @[@"a", @"b", @{@"c" : @[@"d", @"e", @"f", @{@"g" : @[@"h", @"i", @"j"]}]}];
+    
+    AUUStepMenu *stepMenu = [[AUUStepMenu alloc] initWithFrame:CGRectMake(0, 44, self.view.bounds.size.width, self.view.bounds.size.height - 64)  dataSource:datasource];
+    [self.view addSubview:stepMenu];
+    
+    self.view.backgroundColor = [UIColor redColor];
+    
     
 }
 

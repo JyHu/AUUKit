@@ -10,6 +10,8 @@
 
 #define kGoldenRatio ((sqrt(5) - 1) / 2.0)
 
+#define kZero (10e-10)
+
 /**
  *  @author JyHu, 15-05-26 14:05:18
  *

@@ -10,6 +10,16 @@
 #import "AUUColor.h"
 #import "AUUMacro.h"
 
+AUULocation AUULocationMake(CGFloat x, CGFloat y)
+{
+    AUULocation location;
+    
+    location.x = x;
+    location.y = y;
+    
+    return location;
+}
+
 @implementation UIView(AUUPlotView)
 
 - (void)drawLineFrom:(CGPoint)startPoint to:(CGPoint)endPoint width:(CGFloat)width

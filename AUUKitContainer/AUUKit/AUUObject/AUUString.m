@@ -131,7 +131,7 @@ NSString *const kAUUReverseStringKey = @"kAUUReverseStringKey";
     
     NSMutableString *resultStr = [[NSMutableString alloc] initWithString:@""];
     
-    for (NSInteger i; i<length; i++)
+    for (NSInteger i = 0; i<length; i++)
     {
         [resultStr appendString:chString[arc4random()%chString.length]];
     }
