@@ -20,7 +20,6 @@ static NSString *tcellReusefulIdentifier = @"thirdStepCellReusefulIdentifier";
 static NSTimeInterval defaultMenuChangeAnimationDuraiont = 0.35;
 static CGFloat perMenuItemCellHeight = 44.0f;
 
-
 @interface AUUStepMenu() <UITableViewDelegate, UITableViewDataSource>
 
 @property (retain, nonatomic) UITableView *firstStepTable;
