@@ -15,8 +15,6 @@
 		C97E8DA81B1474570054EFAB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C97E8DA71B1474570054EFAB /* Images.xcassets */; };
 		C97E8DAB1B1474570054EFAB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C97E8DA91B1474570054EFAB /* LaunchScreen.xib */; };
 		C97E8DB71B1474570054EFAB /* AUUKitContainerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C97E8DB61B1474570054EFAB /* AUUKitContainerTests.m */; };
-		C97E8DCF1B1474BA0054EFAB /* AUUKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97E8DC71B1474800054EFAB /* AUUKit.framework */; };
-		C97E8DD01B1474BA0054EFAB /* AUUKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C97E8DC71B1474800054EFAB /* AUUKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,27 +25,6 @@
 			remoteGlobalIDString = C97E8D961B1474570054EFAB;
 			remoteInfo = AUUKitContainer;
 		};
-		C97E8DC61B1474800054EFAB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C97E8DC01B14747F0054EFAB /* AUUKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9991B0351B0A22DC00EC3210;
-			remoteInfo = AUUKit;
-		};
-		C97E8DC81B1474800054EFAB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C97E8DC01B14747F0054EFAB /* AUUKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9991B0401B0A22DC00EC3210;
-			remoteInfo = AUUKitTests;
-		};
-		C97E8DD11B1474BA0054EFAB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C97E8DC01B14747F0054EFAB /* AUUKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 9991B0341B0A22DC00EC3210;
-			remoteInfo = AUUKit;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -57,7 +34,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C97E8DD01B1474BA0054EFAB /* AUUKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,7 +56,6 @@
 		C97E8DB01B1474570054EFAB /* AUUKitContainerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AUUKitContainerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C97E8DB51B1474570054EFAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C97E8DB61B1474570054EFAB /* AUUKitContainerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AUUKitContainerTests.m; sourceTree = "<group>"; };
-		C97E8DC01B14747F0054EFAB /* AUUKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AUUKit.xcodeproj; path = AUUKit/AUUKit.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +63,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C97E8DCF1B1474BA0054EFAB /* AUUKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,7 +97,6 @@
 		C97E8D991B1474570054EFAB /* AUUKitContainer */ = {
 			isa = PBXGroup;
 			children = (
-				C97E8DC01B14747F0054EFAB /* AUUKit.xcodeproj */,
 				C97E8D9E1B1474570054EFAB /* AppDelegate.h */,
 				C97E8D9F1B1474570054EFAB /* AppDelegate.m */,
 				C97E8DA11B1474570054EFAB /* ViewController.h */,
@@ -164,15 +137,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C97E8DC11B14747F0054EFAB /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C97E8DC71B1474800054EFAB /* AUUKit.framework */,
-				C97E8DC91B1474800054EFAB /* AUUKitTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -188,7 +152,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				C97E8DD21B1474BA0054EFAB /* PBXTargetDependency */,
 			);
 			name = AUUKitContainer;
 			productName = AUUKitContainer;
@@ -242,12 +205,6 @@
 			mainGroup = C97E8D8E1B1474570054EFAB;
 			productRefGroup = C97E8D981B1474570054EFAB /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = C97E8DC11B14747F0054EFAB /* Products */;
-					ProjectRef = C97E8DC01B14747F0054EFAB /* AUUKit.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				C97E8D961B1474570054EFAB /* AUUKitContainer */,
@@ -255,23 +212,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		C97E8DC71B1474800054EFAB /* AUUKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = AUUKit.framework;
-			remoteRef = C97E8DC61B1474800054EFAB /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C97E8DC91B1474800054EFAB /* AUUKitTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = AUUKitTests.xctest;
-			remoteRef = C97E8DC81B1474800054EFAB /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C97E8D951B1474570054EFAB /* Resources */ = {
@@ -320,11 +260,6 @@
 			isa = PBXTargetDependency;
 			target = C97E8D961B1474570054EFAB /* AUUKitContainer */;
 			targetProxy = C97E8DB11B1474570054EFAB /* PBXContainerItemProxy */;
-		};
-		C97E8DD21B1474BA0054EFAB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = AUUKit;
-			targetProxy = C97E8DD11B1474BA0054EFAB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

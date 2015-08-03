@@ -53,11 +53,11 @@
 //                        startLocation:AUULocationMake(0, 0.8)
 //                          endLocation:AUULocationMake(1, 0.2)];
     
-    [self drawLines:@[[NSValue valueWithCGPoint:CGPointMake(10, 100)],
-                     [NSValue valueWithCGPoint:CGPointMake(100, 30)],
-                     [NSValue valueWithCGPoint:CGPointMake(300, 500)],
-                     [NSValue valueWithCGPoint:CGPointMake(10, 400)],
-                      [NSValue valueWithCGPoint:CGPointMake(200, 300)]] lineWidth:5 color:[UIColor redColor]];
+//    [self drawLines:@[[NSValue valueWithCGPoint:CGPointMake(10, 100)],
+//                     [NSValue valueWithCGPoint:CGPointMake(100, 30)],
+//                     [NSValue valueWithCGPoint:CGPointMake(300, 500)],
+//                     [NSValue valueWithCGPoint:CGPointMake(10, 400)],
+//                      [NSValue valueWithCGPoint:CGPointMake(200, 300)]] lineWidth:5 color:[UIColor redColor]];
 }
 
 

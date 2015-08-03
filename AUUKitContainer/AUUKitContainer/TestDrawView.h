@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <AUUKit/AUUKit.h>
 
 @interface TestDrawView : UIView
 

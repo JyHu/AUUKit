@@ -7,13 +7,12 @@
 //
 
 #import "ViewController.h"
-#import <AUUKit/AUUKit.h>
 #import "TestDrawView.h"
 
 @interface ViewController ()
 
 @property (retain, nonatomic) UIImageView *tView;
-@property (retain, nonatomic) AUUPopView *popView;
+//@property (retain, nonatomic) AUUPopView *popView;
 
 @end
 
@@ -53,7 +52,7 @@
     
 //    NSLog(@"--%@\n%@",@(AUUKitVersionNumber), [[NSString alloc] initWithCString:AUUKitVersionString encoding:NSUTF8StringEncoding]);
     
-    [[AUUIndicator shareIndicator] showAutoHideIndicatorWithDelay:3];
+//    [[AUUIndicator shareIndicator] showAutoHideIndicatorWithDelay:3];
     
 //    UIView *v = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 300)];
 //    v.backgroundColor = [UIColor redColor];
@@ -74,16 +73,6 @@
 //    UISwitch *s = [UISwitch instance];
 //    NSLog(@"%@", NSStringFromClass([s class]));
     
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
-    view.backgroundColor = [UIColor redColor];
-    UITextField *tf = [[UITextField alloc] initWithFrame:CGRectMake(20, 60, 160, 44)];
-    tf.backgroundColor = [UIColor grayColor];
-    [view addSubview:tf];
-    _popView = [[AUUPopView alloc] initWithWidget:view
-                                         position:AUUPopViewPositionCenter];
-    
-        
-    NSLog(@"%@",@(kGoldenRatio));
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -92,16 +81,16 @@
 //        [[AUUIndicator shareIndicator] showIndicatorWithDuration:3];
 //        [[AUUIndicator shareIndicator] showIndicator];
 //    });
-    [_popView show];
+//    [_popView show];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     //    self.tView.size = CGSizeMake(arc4random()%200+100, arc4random()%100+50);
-    self.tView.rect = CGRectMake(generalInteger(0, 100), generalInteger(20, 200), generalInteger(100, 200), generalInteger(100, 300));
-    self.tView.backgroundColor = [UIColor randomColor];
-    
-    
+//    self.tView.rect = CGRectMake(generalInteger(0, 100), generalInteger(20, 200), generalInteger(100, 200), generalInteger(100, 300));
+//    self.tView.backgroundColor = [UIColor randomColor];
+//    
+//    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -1,6 +1,0 @@
-framework module AUUKit {
-  umbrella header "AUUKit.h"
-
-  export *
-  module * { export * }
-}
