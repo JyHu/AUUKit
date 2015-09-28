@@ -13,7 +13,7 @@
 #define kScreenWidth (kScreenSize.width)
 #define kScreenHeight (kScreenSize.height)
 
-extern CGFloat const defaultViewAnimationDuration;
+typedef void (^AUUAnimationHandleBlock) (void);
 
 @interface UIView(AUUView)
 
@@ -36,65 +36,6 @@ extern CGFloat const defaultViewAnimationDuration;
  *  @return self
  */
 + (instancetype)instanceWithFrame:(CGRect)frame;
-
-/**
- *  @author JyHu, 15-05-30 15:05:45
- *
- *  初始化方法，默认的有0.5s的动画时间
- *
- *  @return self
- */
-- (id)initialization;
-
-/**
- *  @author JyHu, 15-05-30 15:05:16
- *
- *  初始化方法，默认的有0.5s的动画
- *
- *  @param frame CGRect
- *
- *  @return self
- */
-- (id)initializationWithFrame:(CGRect)frame;
-
-/**
- *  @author JyHu, 15-05-26 00:05:18
- *
- *  初始化方法
- *
- *  @param duration 动画时间，≤0时表示不要动画
- *
- *  @return self
- */
-- (id)initWithDuration:(NSTimeInterval)duration;
-
-/**
- *  @author JyHu, 15-05-26 00:05:04
- *
- *  初始化方法
- *
- *  @param duration 动画时间
- *  @param frame    frame
- *
- *  @return self
- */
-- (id)initWithDuration:(NSTimeInterval)duration frame:(CGRect)frame;
-
-/**
- *  @author JyHu, 15-05-22 17:05:32
- *
- *  @brief  如果需要过渡动画，设置过渡动画的时间，为0即为不要动画
- */
-@property (assign, nonatomic) NSTimeInterval animationDurationWhenFrameChanged;
-
-/**
- *  @author JyHu, 15-08-03 11:08:12
- *
- *  是否需要过渡动画，如果设置的动画时间是个正数，默认的是需要
- *
- *  @since  v 1.0
- */
-@property (assign, nonatomic) BOOL needAnimationWhenFrameChange;
 
 /**
  *  @author JyHu, 15-05-22 17:05:58
@@ -151,22 +92,6 @@ extern CGFloat const defaultViewAnimationDuration;
  *  获取、设置控件的point
  */
 @property (assign, nonatomic) CGPoint origin;
-
-/**
- *  @author JyHu, 15-05-25 23:05:27
- *
- *  获取、设置控件的frame
- */
-@property (assign, nonatomic) CGRect animationRect;
-
-/**
- *  @author JyHu, 15-08-03 15:08:12
- *
- *  起点在(0,0)的frame
- *
- *  @since  v 1.0
- */
-@property (assign, nonatomic, readonly) CGRect tinyFrame;
 
 /**
  *  @author JyHu, 15-05-22 17:05:57
@@ -261,5 +186,53 @@ extern CGFloat const defaultViewAnimationDuration;
  *  @since  v 1.0
  */
 - (void)removeAllSubViews;
+
+/**
+ *  @author JyHu, 15-09-28 14:09:25
+ *
+ *  @brief  获取当前视图中作为第一响应者的子视图
+ *
+ *  @return 第一响应者
+ *
+ *  @since 1.0
+ */
+- (id)getFirstResponder;
+
+/**
+ *  @author JyHu, 15-09-28 14:09:03
+ *
+ *  @brief  获取当前视图中的某一种视图
+ *
+ *  @param cls Class
+ *
+ *  @return 查找的结果
+ *
+ *  @since 1.0
+ */
+- (id)findSubViewObj:(Class)cls;
+
+/**
+ *  @author JyHu, 15-09-28 14:09:05
+ *
+ *  @brief  UIView的动画
+ *
+ *  @param duration 时间
+ *  @param handle   动画的内容
+ *
+ *  @since 1.0
+ */
+- (void)showInWindowWithduration:(NSTimeInterval)duration handleBlock:(AUUAnimationHandleBlock)handle;
+
+/**
+ *  @author JyHu, 15-09-28 14:09:29
+ *
+ *  @brief  UIView的移除动画
+ *
+ *  @param duration 时间
+ *  @param handle   移除的过程
+ *
+ *  @since 1.0
+ */
+- (void)hideWithDuration:(NSTimeInterval)duration handleBlock:(AUUAnimationHandleBlock)handle;
 
 @end

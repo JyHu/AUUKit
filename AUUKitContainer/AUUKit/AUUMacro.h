@@ -26,10 +26,14 @@
         APIB8                               \
     }
 
-#define kVERSION_UP_TO_8 (kSYSTEM_VERSION >= 8.0)
-#define kVERSION_UP_TO_7 (kSYSTEM_VERSION >= 7.0)
-#define kVERSION_UP_TO_6 (kSYSTEM_VERSION >= 6.0)
-#define kVERSION_7 (kSYSTEM_VERSION >= 7.0 && kSYSTEM_VERSION < 8.0)
+#define IOS8_OR_LATER	( [[[UIDevice currentDevice] systemVersion] compare:@"8.0"] != NSOrderedAscending )
+#define IOS7_OR_LATER	( [[[UIDevice currentDevice] systemVersion] compare:@"7.0"] != NSOrderedAscending )
+#define IOS6_OR_LATER	( [[[UIDevice currentDevice] systemVersion] compare:@"6.0"] != NSOrderedAscending )
+#define IOS5_OR_LATER	( [[[UIDevice currentDevice] systemVersion] compare:@"5.0"] != NSOrderedAscending )
+#define IOS4_OR_LATER	( [[[UIDevice currentDevice] systemVersion] compare:@"4.0"] != NSOrderedAscending )
+#define IOS3_OR_LATER	( [[[UIDevice currentDevice] systemVersion] compare:@"3.0"] != NSOrderedAscending )
+
+#define IS_IPAD         (UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPad)
 
 #define AUUAssert(condition, alert)         \
     if (!(condition))                       \
@@ -64,5 +68,38 @@
 #define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
 #define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
 
+
+// 废弃的API警告
+#undef ignoredDeclarations
+#define ignoredDeclarations(Stuff)          \
+    do {                                    \
+        _Pragma("clang diagnostic push")    \
+        _Pragma("clang diagnostic ignored \"-Wdeprecated-declarations\"") \
+        Stuff                               \
+        _Pragma("clang diagnostic pop")     \
+    } while (0)
+
+
+//国际化
+#undef L
+#define L(key) [[NSBundle mainBundle] localizedStringForKey:(key) value:@"" table:nil]
+
+//释放定时器
+#define INVALIDATE_TIMER(__TIMER)   \
+    {                               \
+        [__TIMER invalidate];       \
+        __TIMER = nil;              \
+    }
+
+
+//view安全释放
+#define VIEW_RELEASE_SAFELY(__REF)    \
+    {                                   \
+        if (nil != (__REF))             \
+        {                               \
+            [__REF removeFromSuperview];\
+        __REF = nil;                    \
+        }                               \
+    }
 
 #endif

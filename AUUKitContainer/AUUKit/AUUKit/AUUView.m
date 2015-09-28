@@ -7,12 +7,7 @@
 //
 
 #import "AUUView.h"
-#import <objc/runtime.h>
 #import "AUUNumber.h"
-
-static void * pDurationWhenFrameChangedKey      = (void *)@"pDurationWhenFrameChangedKey";
-static void * pNeedAnimationWhenFrameChangedKey = (void *)@"pNeedAnimationWhenFrameChangedKey";
-CGFloat const defaultViewAnimationDuration = 0.35;
 
 @implementation UIView(AUUView)
 
@@ -26,78 +21,13 @@ CGFloat const defaultViewAnimationDuration = 0.35;
     return [[[self class] alloc] initWithFrame:frame];
 }
 
-- (id)initialization
-{
-    return [self initWithDuration:defaultViewAnimationDuration];
-}
-
-- (id)initializationWithFrame:(CGRect)frame
-{
-    return [self initWithDuration:defaultViewAnimationDuration frame:frame];
-}
-
-- (id)initWithDuration:(NSTimeInterval)duration
-{
-    self = [[[self class] alloc] init];
-    
-    if (self)
-    {
-        self.needAnimationWhenFrameChange = (duration > 0);
-        self.animationDurationWhenFrameChanged = (duration <= 0 ? 0 : duration);
-    }
-    
-    return self;
-}
-
-- (id)initWithDuration:(NSTimeInterval)duration frame:(CGRect)frame
-{
-    self = [self initWithDuration:duration];
-    
-    if (self)
-    {
-        self.frame = frame;
-    }
-    
-    return self;
-}
-
-- (void)setAnimationDurationWhenFrameChanged:(NSTimeInterval)animationDurationWhenFrameChanged
-{
-    NSTimeInterval duration = animationDurationWhenFrameChanged >= 0 ? animationDurationWhenFrameChanged : 0;
-    
-    self.needAnimationWhenFrameChange = duration > 0;
-    
-    objc_setAssociatedObject(self,
-                             pDurationWhenFrameChangedKey,
-                             @(duration),
-                             OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-- (NSTimeInterval)animationDurationWhenFrameChanged
-{
-    return [objc_getAssociatedObject(self, pDurationWhenFrameChangedKey) floatValue];
-}
-
-- (void)setNeedAnimationWhenFrameChange:(BOOL)needAnimationWhenFrameChange
-{
-    objc_setAssociatedObject(self,
-                             pNeedAnimationWhenFrameChangedKey,
-                             @(needAnimationWhenFrameChange),
-                             OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-- (BOOL)needAnimationWhenFrameChange
-{
-    return [objc_getAssociatedObject(self, pNeedAnimationWhenFrameChangedKey) boolValue];
-}
-
 #pragma mark - Frame 操作
 
 - (void)setWidth:(CGFloat)width
 {
     CGRect rect = self.frame;
     rect.size.width = width;
-    [self resetFrame:rect];
+    self.frame = rect;
 }
 
 - (CGFloat)width
@@ -109,7 +39,7 @@ CGFloat const defaultViewAnimationDuration = 0.35;
 {
     CGRect rect = self.frame;
     rect.size.height = height;
-    [self resetFrame:rect];
+    self.frame = rect;
 }
 
 - (CGFloat)height
@@ -121,7 +51,7 @@ CGFloat const defaultViewAnimationDuration = 0.35;
 {
     CGRect rect = self.frame;
     rect.origin.x = xOrigin;
-    [self resetFrame:rect];
+    self.frame = rect;
 }
 
 - (CGFloat)xOrigin
@@ -133,7 +63,7 @@ CGFloat const defaultViewAnimationDuration = 0.35;
 {
     CGRect rect = self.frame;
     rect.origin.y = yOrigin;
-    [self resetFrame:rect];
+    self.frame = rect;
 }
 
 - (CGFloat)yOrigin
@@ -160,7 +90,7 @@ CGFloat const defaultViewAnimationDuration = 0.35;
 {
     CGRect rect = self.frame;
     rect.size = size;
-    [self resetFrame:rect];
+    self.frame = rect;
 }
 
 - (CGPoint)origin
@@ -172,38 +102,21 @@ CGFloat const defaultViewAnimationDuration = 0.35;
 {
     CGRect rect = self.frame;
     rect.origin = origin;
-    [self resetFrame:rect];
-}
-
-- (CGRect)animationRect
-{
-    return self.frame;
-}
-
-- (void)setAnimationRect:(CGRect)animationRect
-{
-    [self resetFrame:animationRect];
-}
-
-- (CGRect)tinyFrame
-{
-    CGRect rect = self.frame;
-    rect.origin = CGPointZero;
-    return rect;
+    self.frame = rect;
 }
 
 - (void)setIncreaseHeight:(CGFloat)increaseHeight
 {
     CGRect rect = self.frame;
     rect.size.height += increaseHeight;
-    [self resetFrame:rect];
+    self.frame = rect;
 }
 
 - (void)setIncreaseWidth:(CGFloat)increaseWidth
 {
     CGRect rect = self.frame;
     rect.size.width += increaseWidth;
-    [self resetFrame:rect];
+    self.frame = rect;
 }
 
 - (void)setIncreaseSize:(CGSize)increaseSize
@@ -211,28 +124,28 @@ CGFloat const defaultViewAnimationDuration = 0.35;
     CGRect rect = self.frame;
     rect.size.height += increaseSize.height;
     rect.size.width += increaseSize.width;
-    [self resetFrame:rect];
+    self.frame = rect;
 }
 
 - (void)setIncreaseXOrigin:(CGFloat)increaseXOrigin
 {
     CGRect rect = self.frame;
     rect.origin.x = increaseXOrigin;
-    [self resetFrame:rect];
+    self.frame = rect;
 }
 
 - (void)setIncreaseYOrigin:(CGFloat)increaseYOrigin
 {
     CGRect rect = self.frame;
     rect.origin.y += increaseYOrigin;
-    [self resetFrame:rect];
+    self.frame = rect;
 }
 
 - (void)moveToPoint:(CGPoint)point
 {
     CGRect rect = self.frame;
     rect.origin = point;
-    [self resetFrame:rect];
+    self.frame = rect;
 }
 
 - (void)moveWithDistance:(CGSize)distance
@@ -240,7 +153,7 @@ CGFloat const defaultViewAnimationDuration = 0.35;
     CGRect rect = self.frame;
     rect.size.height += distance.height;
     rect.size.width += distance.width;
-    [self resetFrame:rect];
+    self.frame = rect;
 }
 
 - (void)alignCenterWithYOrigin:(CGFloat)yOrigin
@@ -248,23 +161,7 @@ CGFloat const defaultViewAnimationDuration = 0.35;
     CGRect rect = self.frame;
     rect.origin.y = yOrigin;
     rect.origin.x = (kScreenWidth - rect.size.width) / 2.0;
-    [self resetFrame:rect];
-}
-
-#pragma mark - help methods
-
-- (void)resetFrame:(CGRect)rect
-{
-    if (self.needAnimationWhenFrameChange)
-    {
-        [UIView animateWithDuration:self.animationDurationWhenFrameChanged animations:^{
-            self.frame = rect;
-        }];
-    }
-    else
-    {
-        self.frame = rect;
-    }
+    self.frame = rect;
 }
 
 #pragma mark - Layer handles
@@ -283,6 +180,93 @@ CGFloat const defaultViewAnimationDuration = 0.35;
     {
         [view removeFromSuperview];
     }
+}
+
+- (id)getFirstResponder
+{
+    if (self.subviews.count == 0)
+    {
+        if ([self isKindOfClass:[UITextView class]] || [self isKindOfClass:[UITextField class]])
+        {
+            if ((BOOL)[self isFirstResponder])
+            {
+                return self;
+            }
+        }
+        
+        return nil;
+    }
+    
+    for (id view in self.subviews)
+    {
+        if ([view isKindOfClass:[UITextField class]] || [view isKindOfClass:[UITextView class]])
+        {
+            if ((BOOL)[view isFirstResponder])
+            {
+                return view;
+            }
+        }
+        else if ([[view subviews] count] > 0)
+        {
+            id v = [view getFirstResponder];
+            
+            if (v)
+            {
+                return v;
+            }
+        }
+    }
+    
+    return nil;
+}
+
+- (id)findSubViewObj:(Class)cls
+{
+    if (self.subviews.count == 0)
+    {
+        if ([self isKindOfClass:cls])
+        {
+            return self;
+        }
+        
+        return nil;
+    }
+    else
+    {
+        NSLog(@"%@", self.subviews);
+        
+        for (id view in self.subviews)
+        {
+            if ([view isKindOfClass:cls])
+            {
+                return view;
+            }
+            else
+            {
+                return [view findSubViewObj:cls];
+            }
+        }
+    }
+    
+    return nil;
+}
+
+- (void)showInWindowWithduration:(NSTimeInterval)duration handleBlock:(AUUAnimationHandleBlock)handle
+{
+    [[UIApplication sharedApplication].keyWindow addSubview:self];
+    
+    [UIView animateWithDuration:duration animations:^{
+        handle();
+    }];
+}
+
+- (void)hideWithDuration:(NSTimeInterval)duration handleBlock:(AUUAnimationHandleBlock)handle
+{
+    [UIView animateWithDuration:duration animations:^{
+        handle();
+    } completion:^(BOOL finished) {
+        [self removeFromSuperview];
+    }];
 }
 
 @end
