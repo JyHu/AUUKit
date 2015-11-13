@@ -7,8 +7,32 @@
 //
 
 #import "AUULabel.h"
+#import "AUUView.h"
 
 @implementation UILabel(AUULabel)
 
+- (void)setFontSize:(CGFloat)fontSize
+{
+    self.font = [UIFont systemFontOfSize:fontSize];
+}
+
+- (void)sizeToFitWithWidth:(CGFloat)width
+{
+    CGRect rect = self.frame;
+    
+    self.width = width;
+    [self sizeToFit];
+    
+    rect.size.height = self.height;
+    
+    self.frame = rect;
+}
+
+- (void)setLineAttributedText:(NSString *)text
+{
+    NSMutableAttributedString *mutableAttri = [[NSMutableAttributedString alloc] initWithString:text];
+    [mutableAttri addAttribute:NSStrikethroughStyleAttributeName value:@(NSUnderlineStyleSingle) range:NSMakeRange(0, text.length)];
+    self.attributedText = mutableAttri;
+}
 
 @end

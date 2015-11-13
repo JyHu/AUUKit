@@ -95,7 +95,6 @@ static CGFloat perMenuItemCellHeight = 44.0f;
         self.firstStepTable.delegate = self;
         self.firstStepTable.dataSource = self;
         self.firstStepTable.backgroundColor = [UIColor blueColor];
-        self.firstStepTable.animationDurationWhenFrameChanged = defaultMenuChangeAnimationDuraiont;
         [self addSubview:self.firstStepTable];
     }
 }
@@ -187,7 +186,6 @@ static CGFloat perMenuItemCellHeight = 44.0f;
                 self.secondStepTable.dataSource = self;
                 self.secondStepTable.tag = kSecondStepTableTag;
                 self.secondStepTable.backgroundColor = [UIColor blueColor];
-                self.secondStepTable.animationDurationWhenFrameChanged = defaultMenuChangeAnimationDuraiont;
                 [self addSubview:self.secondStepTable];
                 
                 [self reloadFrame];
@@ -218,7 +216,6 @@ static CGFloat perMenuItemCellHeight = 44.0f;
                 self.thirdStepTable.dataSource = self;
                 self.thirdStepTable.tag = kThirdStepTableTag;
                 self.thirdStepTable.backgroundColor = [UIColor blueColor];
-                self.thirdStepTable.animationDurationWhenFrameChanged = defaultMenuChangeAnimationDuraiont;
                 [self addSubview:self.thirdStepTable];
                 
                 [self reloadFrame];
@@ -325,7 +322,7 @@ static CGFloat perMenuItemCellHeight = 44.0f;
 {
     if (self.thirdStepTable)
     {
-        [UIView animateWithDuration:defaultViewAnimationDuration animations:^{
+        [UIView animateWithDuration:0.36 animations:^{
             
             self.thirdStepTable.xOrigin = self.width;
             self.thirdStepTable.alpha = 0;
@@ -347,7 +344,7 @@ static CGFloat perMenuItemCellHeight = 44.0f;
 {
     if (self.secondStepTable)
     {
-        [UIView animateWithDuration:defaultViewAnimationDuration animations:^{
+        [UIView animateWithDuration:0.36 animations:^{
             
             self.secondStepTable.xOrigin = self.width;
             self.secondStepTable.alpha = 0;

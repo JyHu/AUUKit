@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "TestDrawView.h"
 #import "AUUStepMenu.h"
+#import "AUUKit.h"
+#import "NSArray+JyHu.h"
 
 @interface ViewController ()
 
@@ -25,63 +27,9 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-//    self.tView = [[UIImageView alloc] initWithFrame:CGRectMake(generalInteger(0, 100), generalInteger(100, 200), generalInteger(200, 300), generalInteger(200, 400))];
-//    self.tView.backgroundColor = [UIColor randomColor];
-//    [self.tView setImageWithURLString:@"http://lovelace-media.imgix.net/getty/187587518.jpg?w=790&h=444&fit=crop&crop=faces&fm=jpg&q=65"];
-//    [self.view addSubview:self.tView];
-//    
-//    TestDrawView *t = [[TestDrawView alloc] initWithFrame:self.view.bounds];
-//    [self.view addSubview:t];
-//    
-//    [[AUUNetworkHandler shareInstance] getWithURLString:@"http://syt.sf-express.com/css/newmobile/queryBillInfo.action?delivery_id=102950036775" successed:^(NSData *data) {
-////        NSLog(@"%@",data);
-//        NSDictionary *dict = [data mutableObjectFromJSONData];
-//        NSLog(@"%@",dict);
-//    } failed:^(NSError *error) {
-//        NSLog(@"%@",error);
-//    }];
-//    
-    
-//    for (NSInteger i = 0 ; i < 100; i ++)
-//    {
-//        [[AUUNetworkHandler shareInstance] getWithURLString:@"http://t12.baidu.com/it/u=4095575894,102452705&fm=32&s=A98AA55F526172A6F6A058E50300A060&w=623&h=799&img.JPEG" successed:^(NSData *data) {
-//            NSLog(@"successed");
-//        } failed:^(NSError *error) {
-//            NSLog(@"%@",error);
-//        }];
-//    }
-    
-//    NSLog(@"--%@\n%@",@(AUUKitVersionNumber), [[NSString alloc] initWithCString:AUUKitVersionString encoding:NSUTF8StringEncoding]);
-    
-//    [[AUUIndicator shareIndicator] showAutoHideIndicatorWithDelay:3];
-    
-//    UIView *v = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 300)];
-//    v.backgroundColor = [UIColor redColor];
-//    [[[[UIApplication sharedApplication] delegate] window] addSubview:v];
-//    NSLog(@"%@",NSStringFromCGRect(v.frame));
-//    
-//    UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
-//    if (!keyWindow)
-//    {
-//        NSArray *windows = [UIApplication sharedApplication].windows;
-//        NSLog(@"%@",windows);
-//        keyWindow = [windows firstObject];
-//    }
-//    NSLog(@"%@", @(keyWindow.windowLevel));
-//    [keyWindow addSubview:v];
-//    [keyWindow bringSubviewToFront:v];
-//
-//    UISwitch *s = [UISwitch instance];
-//    NSLog(@"%@", NSStringFromClass([s class]));
-    
     NSArray *datasource = @[@"a", @"b", @{@"c" : @[@"d", @"e", @"f", @{@"g" : @[@"h", @"i", @"j"]}]}];
     
-    AUUStepMenu *stepMenu = [[AUUStepMenu alloc] initWithFrame:CGRectMake(0, 44, self.view.bounds.size.width, self.view.bounds.size.height - 64)  dataSource:datasource];
-    [self.view addSubview:stepMenu];
-    
-    self.view.backgroundColor = [UIColor redColor];
-    
-    
+    NSLog(@"%@", [datasource objectAtIndex:1]);
 }
 
 - (void)viewDidAppear:(BOOL)animated

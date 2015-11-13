@@ -19,7 +19,6 @@
 #import "AUUPlotView.h"
 #import "AUUView.h"
 
-#import "AUUArray.h"
 #import "AUUDate.h"
 #import "AUUJSONAdaptor.h"
 #import "AUUMutableArray.h"
@@ -32,5 +31,9 @@
 #import "AUUIndicator.h"
 #import "AUULaunchGuidView.h"
 #import "AUUPopView.h"
+
+#import "NSObject+JyHu.h"
+
+#import "NSArray+JyHu.h"
 
 #endif

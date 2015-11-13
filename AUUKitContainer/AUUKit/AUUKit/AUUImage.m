@@ -133,9 +133,9 @@ static void addRoundedRectToPath(CGContextRef context,CGRect rect,float radius,A
     return outputImage;
 }
 
-+ (UIImage *)imageWithColor:(UIColor *)color
++ (UIImage *)imageWithColor:(UIColor *)color withSize:(CGSize)size
 {
-    CGRect rect = CGRectMake(0, 0, 1, 1);
+    CGRect rect = CGRectMake(0, 0, size.width, size.height);
     UIGraphicsBeginImageContext(rect.size);
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSetFillColorWithColor(context, color.CGColor);
@@ -144,6 +144,11 @@ static void addRoundedRectToPath(CGContextRef context,CGRect rect,float radius,A
     UIGraphicsEndImageContext();
     
     return image;
+}
+
++ (UIImage *)imageWithColor:(UIColor *)color
+{
+    return [self imageWithColor:color withSize:CGSizeMake(1, 1)];
 }
 
 @end

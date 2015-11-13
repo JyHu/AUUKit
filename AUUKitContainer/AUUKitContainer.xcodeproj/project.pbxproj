@@ -13,7 +13,6 @@
 		1C9EF6251B6EFE5600074FD5 /* AUULabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9EF5F51B6EFE5600074FD5 /* AUULabel.m */; };
 		1C9EF6261B6EFE5600074FD5 /* AUUPlotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9EF5F71B6EFE5600074FD5 /* AUUPlotView.m */; };
 		1C9EF6271B6EFE5600074FD5 /* AUUView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9EF5F91B6EFE5600074FD5 /* AUUView.m */; };
-		1C9EF6281B6EFE5600074FD5 /* AUUArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9EF5FF1B6EFE5600074FD5 /* AUUArray.m */; };
 		1C9EF6291B6EFE5600074FD5 /* AUUDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9EF6011B6EFE5600074FD5 /* AUUDate.m */; };
 		1C9EF62A1B6EFE5600074FD5 /* AUUJSONAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9EF6031B6EFE5600074FD5 /* AUUJSONAdaptor.m */; };
 		1C9EF62B1B6EFE5600074FD5 /* AUUMutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9EF6051B6EFE5600074FD5 /* AUUMutableArray.m */; };
@@ -25,6 +24,8 @@
 		1C9EF6351B6EFE5600074FD5 /* AUULaunchGuidView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9EF61C1B6EFE5600074FD5 /* AUULaunchGuidView.m */; };
 		1C9EF6361B6EFE5600074FD5 /* AUUPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9EF61E1B6EFE5600074FD5 /* AUUPopView.m */; };
 		1C9EF63C1B6F462200074FD5 /* AUUStepMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9EF63B1B6F462200074FD5 /* AUUStepMenu.m */; };
+		1CB472811BF5D36B00A674E9 /* NSObject+JyHu.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CB472801BF5D36B00A674E9 /* NSObject+JyHu.m */; };
+		1CB472841BF5D60200A674E9 /* NSArray+JyHu.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CB472831BF5D60200A674E9 /* NSArray+JyHu.m */; };
 		998B365B1B2450E4006A624F /* TestDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 998B365A1B2450E4006A624F /* TestDrawView.m */; };
 		C97E8D9D1B1474570054EFAB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C97E8D9C1B1474570054EFAB /* main.m */; };
 		C97E8DA01B1474570054EFAB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C97E8D9F1B1474570054EFAB /* AppDelegate.m */; };
@@ -73,8 +74,6 @@
 		1C9EF5F81B6EFE5600074FD5 /* AUUView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUView.h; sourceTree = "<group>"; };
 		1C9EF5F91B6EFE5600074FD5 /* AUUView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUUView.m; sourceTree = "<group>"; };
 		1C9EF5FB1B6EFE5600074FD5 /* AUUMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUMacro.h; sourceTree = "<group>"; };
-		1C9EF5FE1B6EFE5600074FD5 /* AUUArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUArray.h; sourceTree = "<group>"; };
-		1C9EF5FF1B6EFE5600074FD5 /* AUUArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUUArray.m; sourceTree = "<group>"; };
 		1C9EF6001B6EFE5600074FD5 /* AUUDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUDate.h; sourceTree = "<group>"; };
 		1C9EF6011B6EFE5600074FD5 /* AUUDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUUDate.m; sourceTree = "<group>"; };
 		1C9EF6021B6EFE5600074FD5 /* AUUJSONAdaptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUJSONAdaptor.h; sourceTree = "<group>"; };
@@ -98,6 +97,10 @@
 		1C9EF6381B6F3D6600074FD5 /* AUUKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AUUKit.h; sourceTree = "<group>"; };
 		1C9EF63A1B6F462200074FD5 /* AUUStepMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AUUStepMenu.h; path = StepMenu/AUUStepMenu.h; sourceTree = "<group>"; };
 		1C9EF63B1B6F462200074FD5 /* AUUStepMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AUUStepMenu.m; path = StepMenu/AUUStepMenu.m; sourceTree = "<group>"; };
+		1CB4727F1BF5D36B00A674E9 /* NSObject+JyHu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JyHu.h"; sourceTree = "<group>"; };
+		1CB472801BF5D36B00A674E9 /* NSObject+JyHu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JyHu.m"; sourceTree = "<group>"; };
+		1CB472821BF5D60200A674E9 /* NSArray+JyHu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+JyHu.h"; sourceTree = "<group>"; };
+		1CB472831BF5D60200A674E9 /* NSArray+JyHu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JyHu.m"; sourceTree = "<group>"; };
 		998B36591B2450E4006A624F /* TestDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestDrawView.h; sourceTree = "<group>"; };
 		998B365A1B2450E4006A624F /* TestDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestDrawView.m; sourceTree = "<group>"; };
 		C97E8D971B1474570054EFAB /* AUUKitContainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AUUKitContainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,8 +172,6 @@
 		1C9EF5FD1B6EFE5600074FD5 /* AUUObject */ = {
 			isa = PBXGroup;
 			children = (
-				1C9EF5FE1B6EFE5600074FD5 /* AUUArray.h */,
-				1C9EF5FF1B6EFE5600074FD5 /* AUUArray.m */,
 				1C9EF6001B6EFE5600074FD5 /* AUUDate.h */,
 				1C9EF6011B6EFE5600074FD5 /* AUUDate.m */,
 				1C9EF6021B6EFE5600074FD5 /* AUUJSONAdaptor.h */,
@@ -181,6 +182,10 @@
 				1C9EF6071B6EFE5600074FD5 /* AUUNumber.m */,
 				1C9EF6081B6EFE5600074FD5 /* AUUString.h */,
 				1C9EF6091B6EFE5600074FD5 /* AUUString.m */,
+				1CB4727F1BF5D36B00A674E9 /* NSObject+JyHu.h */,
+				1CB472801BF5D36B00A674E9 /* NSObject+JyHu.m */,
+				1CB472821BF5D60200A674E9 /* NSArray+JyHu.h */,
+				1CB472831BF5D60200A674E9 /* NSArray+JyHu.m */,
 			);
 			path = AUUObject;
 			sourceTree = "<group>";
@@ -327,7 +332,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0630;
-				ORGANIZATIONNAME = "北京爱康泰科技有限责任公司";
+				ORGANIZATIONNAME = "Joyous Hu";
 				TargetAttributes = {
 					C97E8D961B1474570054EFAB = {
 						CreatedOnToolsVersion = 6.3;
@@ -386,6 +391,7 @@
 				1C9EF6251B6EFE5600074FD5 /* AUULabel.m in Sources */,
 				1C9EF6341B6EFE5600074FD5 /* AUUIndicator.m in Sources */,
 				1C9EF6291B6EFE5600074FD5 /* AUUDate.m in Sources */,
+				1CB472841BF5D60200A674E9 /* NSArray+JyHu.m in Sources */,
 				1C9EF6211B6EFE5600074FD5 /* AUUColor.m in Sources */,
 				C97E8DA31B1474570054EFAB /* ViewController.m in Sources */,
 				1C9EF6271B6EFE5600074FD5 /* AUUView.m in Sources */,
@@ -394,6 +400,7 @@
 				C97E8DA01B1474570054EFAB /* AppDelegate.m in Sources */,
 				998B365B1B2450E4006A624F /* TestDrawView.m in Sources */,
 				1C9EF62D1B6EFE5600074FD5 /* AUUString.m in Sources */,
+				1CB472811BF5D36B00A674E9 /* NSObject+JyHu.m in Sources */,
 				1C9EF6301B6EFE5600074FD5 /* AUUStringEncryption.m in Sources */,
 				1C9EF62B1B6EFE5600074FD5 /* AUUMutableArray.m in Sources */,
 				1C9EF63C1B6F462200074FD5 /* AUUStepMenu.m in Sources */,
@@ -403,7 +410,6 @@
 				1C9EF6231B6EFE5600074FD5 /* AUUImage.m in Sources */,
 				C97E8D9D1B1474570054EFAB /* main.m in Sources */,
 				1C9EF6261B6EFE5600074FD5 /* AUUPlotView.m in Sources */,
-				1C9EF6281B6EFE5600074FD5 /* AUUArray.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

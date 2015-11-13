@@ -34,8 +34,38 @@ typedef NS_ENUM(NSUInteger, AUUImageRoundedCorner) {
  */
 - (UIImage *)roundedRectWithRadius:(float)radius cornerMask:(AUUImageRoundedCorner)cornerMask;
 
+/**
+ *  @author JyHu, 15-11-13 15:11:22
+ *
+ *  @brief  毛玻璃效果
+ *
+ *  @param radius 模糊的程度
+ *
+ *  @return 毛玻璃图片
+ */
 - (UIImage *)blurImageWithRadius:(CGFloat)radius;
 
+/**
+ *  @author JyHu, 15-11-13 15:11:13
+ *
+ *  @brief  一张 1 × 1 大小的纯色图片
+ *
+ *  @param color 图片颜色
+ *
+ *  @return 纯色图片
+ */
 + (UIImage *)imageWithColor:(UIColor *)color;
+
+/**
+ *  @author JyHu, 15-11-13 15:11:12
+ *
+ *  @brief  做一张size大小的纯色图片
+ *
+ *  @param color 图片颜色
+ *  @param size  图片大小
+ *
+ *  @return 纯色图片
+ */
++ (UIImage *)imageWithColor:(UIColor *)color withSize:(CGSize)size;
 
 @end

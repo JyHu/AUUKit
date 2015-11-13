@@ -45,7 +45,7 @@ NSTimeInterval const AUUWeeksSeconds = AUUDaysSeconds * 7;
 
     NSInteger unitFlag;
     
-    if (kVERSION_UP_TO_8)
+    if (IOS8_OR_LATER)
     {
         unitFlag = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond | NSCalendarUnitWeekday | NSCalendarUnitWeekdayOrdinal | NSCalendarUnitQuarter | NSCalendarUnitWeekOfMonth | NSCalendarUnitWeekOfYear;
     }
@@ -66,7 +66,7 @@ NSTimeInterval const AUUWeeksSeconds = AUUDaysSeconds * 7;
 {
     NSString *gregorian;
     
-    if (kVERSION_UP_TO_8)
+    if (IOS8_OR_LATER)
     {
         gregorian = NSCalendarIdentifierGregorian;
     }
