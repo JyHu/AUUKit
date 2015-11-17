@@ -71,4 +71,40 @@ typedef NS_ENUM(NSUInteger, AUUImageRoundedCorner) {
  */
 + (UIImage *)imageWithColor:(UIColor *)color withSize:(CGSize)size;
 
+/**
+ *  @author JyHu, 15-11-17 16:11:29
+ *
+ *  @brief  获取一张图片上的某一点的颜色
+ *
+ *  @param point 图片上的点
+ *
+ *  @return 颜色UIColor
+ */
+- (UIColor *)colorAtPixel:(CGPoint)point;
+
+/**
+ *  @author JyHu, 15-11-17 17:11:42
+ *
+ *  @brief  截取一个范围内的图片
+ *
+ *  @param rect 要截取的图片范围
+ *
+ *  @return 截取后的图片
+ */
+- (UIImage *)croppingInRect:(CGRect)rect;
+
+/**
+ *  @author JyHu, 15-11-17 17:11:55
+ *
+ *  @brief  根据遮盖来截取相应形状的图片
+ *
+ *  @param maskImage 遮盖的图片
+ *
+ *  @return 截取到的图片
+ */
+- (UIImage *)imageWithMaskImage:(UIImage *)maskImage;
+
+
+- (UIImage *)scaleToSize:(CGSize)size;
+
 @end

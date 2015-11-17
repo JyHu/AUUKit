@@ -12,12 +12,17 @@
 
 + (id)imageViewWithImage:(UIImage *)image
 {
-    return [[UIImageView alloc] initWithImage:image];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+    imageView.contentMode = UIViewContentModeScaleAspectFit;
+    return imageView;
 }
 
 + (id)imageViewImage:(UIImage *)image highlightedImage:(UIImage *)highlightedImage
 {
-    return [[UIImageView alloc] initWithImage:image highlightedImage:highlightedImage];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:image
+                                               highlightedImage:highlightedImage];
+    imageView.contentMode = UIViewContentModeScaleAspectFit;
+    return imageView;
 }
 
 @end

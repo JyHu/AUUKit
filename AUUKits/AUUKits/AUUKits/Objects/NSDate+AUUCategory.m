@@ -9,6 +9,7 @@
 #import "NSDate+AUUCategory.h"
 #import "NSString+AUUCategory.h"
 #import "AUUMacros.h"
+#import "AUUDebugs.h"
 
 #define kAUULunarCalendarMinYear (1900)
 #define kAUULunarCalendarMaxYear (2049)
@@ -179,7 +180,7 @@ NSTimeInterval const AUUWeeksSeconds = AUUDaysSeconds * 7;
         return fRes;
     }
     
-    NSLog(@"请按格式化要求输入控制字符串");
+    AUUAssert(0, @"请按格式化要求输入控制字符串");
     
     return nil;
 }
@@ -207,7 +208,7 @@ NSTimeInterval const AUUWeeksSeconds = AUUDaysSeconds * 7;
         return fRes;
     }
     
-    NSLog(@"请按格式化要求输入控制字符串");
+    AUUAssert(0, @"请按格式化要求输入控制字符串");
     
     return nil;
 }
@@ -246,7 +247,7 @@ NSTimeInterval const AUUWeeksSeconds = AUUDaysSeconds * 7;
         return fRes;
     }
     
-    NSLog(@"请按格式化要求输入控制字符串");
+    AUUAssert(0, @"请按格式化要求输入控制字符串");
     
     return nil;
 }
@@ -533,11 +534,6 @@ NSTimeInterval const AUUWeeksSeconds = AUUDaysSeconds * 7;
     
     AUULunarDate *lunarDate = [self copy];
     
-    //    lunarDate.year = self.year;
-    //    lunarDate.month = self.month;
-    //    lunarDate.day = self.day;
-    //    lunarDate.solarDate = self.solarDate;
-    
     lunarDate.solarDate = [lunarDate.solarDate dateByAddingTimeInterval:AUUDaysSeconds];
     
     lunarDate.day += 1;
@@ -628,11 +624,6 @@ NSTimeInterval const AUUWeeksSeconds = AUUDaysSeconds * 7;
     self.solarDate = [d.solarDate copy];
     
     d = nil;
-}
-
-- (void)description
-{
-    NSLog(@"%@ - Lunar date : %@-%@-%@  , Solar date : %@",self, @(self.year), @(self.month), @(self.day), self.solarDate);
 }
 
 @end

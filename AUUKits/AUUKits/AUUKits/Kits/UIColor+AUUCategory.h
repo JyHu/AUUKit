@@ -17,6 +17,8 @@ typedef struct{
     CGFloat A;
 } RGBA;
 
+UIColor *colorWithRGBA(RGBA rgba);
+
 @interface UIColor (AUUCategory)
 
 /**

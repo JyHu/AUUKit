@@ -11,10 +11,14 @@
 #import "AUUMacros.h"
 #import "AUUDebugs.h"
 #import "UILabel+AUUCategory.h"
+#import "NSObject+AUUCategory.h"
+#import "UIImage+AUUCategory.h"
 
 @interface ViewController ()
 
 @property (retain, nonatomic) UILabel *label;
+
+@property (retain, nonatomic) UIImage *image;
 
 @end
 
@@ -59,10 +63,35 @@
     self.label.backgroundColor = [UIColor redColor];
     self.label.autoFit = YES;
     self.label.autoFitWidth = 100;
-//    self.label.text = @" 你好啊 ";
+    self.label.text = @" 你好啊 ";
+//    [self.label setText:@" hello "];
     [self.label setLineAttributedText:@"adfaljd"];
     
     [self.view addSubview:self.label];
+    
+//    NSLog(@"-- %@", [UIView catchMyAttributes]);
+//    NSArray *Arr = [UIView catchMyMethods];
+//    AUUError(@"afjakjsd ");
+//    AUUDebug(@"%@", Arr);
+//    NSLog(@"%@", Arr);
+    
+//    AUUError(@"%@", [UIView catchMyMethods]);
+    
+    AUUAsserts(0, @"要替换的值越界，最大可替换的值是%@，而要替换的值是%@", @(8), @(10));
+    
+    
+//    self.view.backgroundColor = [[UIImage imageNamed:@"t.jpg"] colorAtPixel:CGPointMake(534, 742)];
+    
+    
+    self.image = [UIImage imageNamed:@"t.jpg"];
+    
+//    self.image = [[UIImage imageNamed:@"t.jpg"] croppingInRect:CGRectMake(139, 221, 520, 520)];
+    
+    UIImage *i = [[UIImage imageNamed:@"t.jpg"] scaleToSize:CGSizeMake(200, 200)];
+    NSLog(@"%@", NSStringFromCGSize(i.size));
+    
+    
+    self.image = [[UIImage imageNamed:@"t.jpg"] scaleToSize:CGSizeMake(200, 200)];
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
@@ -71,6 +100,18 @@
 //    [self.label sizeToFitWithWidth:100];
     NSString *str = arc4random() % 2 == 1 ? @" 那卡就当减肥垃圾堆里放假阿里的解放垃圾水电费看那看不卡SD卡就发生看得见放辣椒谁都不卡的看；激发了；带进来；啊就邓丽君法律；弹尽粮绝" : @"  ajdkfjalj ajdlj ";
     [self.label setLineAttributedText:str];
+    
+}
+
+- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    UITouch *touch = touches.anyObject;
+    CGPoint point = [touch locationInView:self.imageView];
+    
+    CGPoint pt = CGPointMake((point.x / self.imageView.width) * self.image.size.width,
+                             (point.y / self.imageView.height) * self.image.size.height);
+    
+    self.view.backgroundColor = [self.image colorAtPixel:pt];
 }
 
 - (void)didReceiveMemoryWarning {

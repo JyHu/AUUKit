@@ -22,32 +22,36 @@ static void * p_AutoFitWidthAssociatedKey = (void *)@"p_AutoFitWidthAssociatedKe
 {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        [self methodExchangeImplementationsWithOriginSelector:@selector(setText:)
-                                               swizedSelector:@selector(_setText:)];
-        [self methodExchangeImplementationsWithOriginSelector:@selector(setAttributedText:)
-                                               swizedSelector:@selector(_setAttributedText:)];
+//        [self methodExchangeImplementationsWithOriginSelector:@selector(setText:)
+//                                               swizedSelector:@selector(_setText:)];
+//        [self methodExchangeImplementationsWithOriginSelector:@selector(setAttributedText:)
+//                                               swizedSelector:@selector(_setAttributedText:)];
     });
 }
 
-- (void)_setText:(NSString *)text
-{
+//- (void)_setText:(NSString *)text
+//{
+//    [self _setText:text];
+//    
 //    if (self.autoFit && self.autoFitWidth > 0)
 //    {
 //        [self setAutoFitWidth:self.autoFitWidth];
 //    }
-    
-    [self _setText:text];
-}
+//}
 
-- (void)_setAttributedText:(NSAttributedString *)attributedText
-{
-    [self _setAttributedText:attributedText];
-    
-    if (self.autoFit && self.autoFitWidth > 0)
-    {
-        [self setAutoFitWidth:self.autoFitWidth];
-    }
-}
+//- (void)_setAttributedText:(NSAttributedString *)attributedText
+//{
+//    [self _setAttributedText:attributedText];
+//    
+//    [self setAutoFitWidth:100];
+//    
+//    NSLog(@"%d %.2f", self.autoFit, self.autoFitWidth);
+//    
+//    if (self.autoFit && self.autoFitWidth > 0)
+//    {
+//        
+//    }
+//}
 
 
 

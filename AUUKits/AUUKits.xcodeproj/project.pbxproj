@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C06BC951BFB0FDA00F50E7F /* AUUKeychainAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C06BC941BFB0FDA00F50E7F /* AUUKeychainAccess.m */; };
+		1C06BC971BFB19E300F50E7F /* t.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1C06BC961BFB19E300F50E7F /* t.jpg */; };
+		1C06BC9F1BFB2E2F00F50E7F /* AUUKitsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C06BC9E1BFB2E2F00F50E7F /* AUUKitsTests.m */; };
+		1C06BCA81BFB326E00F50E7F /* UITextField+AUUCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C06BCA71BFB326E00F50E7F /* UITextField+AUUCategory.m */; };
+		1C06BCAB1BFB33E800F50E7F /* UITextView+AUUCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C06BCAA1BFB33E800F50E7F /* UITextView+AUUCategory.m */; };
 		1CB4A8441BF96C3E00498F45 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CB4A8431BF96C3E00498F45 /* main.m */; };
 		1CB4A8471BF96C3E00498F45 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CB4A8461BF96C3E00498F45 /* AppDelegate.m */; };
 		1CB4A84A1BF96C3E00498F45 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CB4A8491BF96C3E00498F45 /* ViewController.m */; };
@@ -31,7 +36,27 @@
 		1CB4A8C41BF98EC600498F45 /* AUUStepMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CB4A8C31BF98EC600498F45 /* AUUStepMenu.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1C06BCA11BFB2E2F00F50E7F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1CB4A8371BF96C3D00498F45 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1CB4A83E1BF96C3E00498F45;
+			remoteInfo = AUUKits;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		1C06BC931BFB0FDA00F50E7F /* AUUKeychainAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUKeychainAccess.h; sourceTree = "<group>"; };
+		1C06BC941BFB0FDA00F50E7F /* AUUKeychainAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUUKeychainAccess.m; sourceTree = "<group>"; };
+		1C06BC961BFB19E300F50E7F /* t.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = t.jpg; sourceTree = "<group>"; };
+		1C06BC9C1BFB2E2F00F50E7F /* AUUKitsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AUUKitsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C06BC9E1BFB2E2F00F50E7F /* AUUKitsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AUUKitsTests.m; sourceTree = "<group>"; };
+		1C06BCA01BFB2E2F00F50E7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C06BCA61BFB326E00F50E7F /* UITextField+AUUCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+AUUCategory.h"; sourceTree = "<group>"; };
+		1C06BCA71BFB326E00F50E7F /* UITextField+AUUCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+AUUCategory.m"; sourceTree = "<group>"; };
+		1C06BCA91BFB33E800F50E7F /* UITextView+AUUCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+AUUCategory.h"; sourceTree = "<group>"; };
+		1C06BCAA1BFB33E800F50E7F /* UITextView+AUUCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+AUUCategory.m"; sourceTree = "<group>"; };
 		1CB4A83F1BF96C3E00498F45 /* AUUKits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AUUKits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CB4A8431BF96C3E00498F45 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1CB4A8451BF96C3E00498F45 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -80,6 +105,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1C06BC991BFB2E2F00F50E7F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1CB4A83C1BF96C3E00498F45 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -90,10 +122,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C06BC9D1BFB2E2F00F50E7F /* AUUKitsTests */ = {
+			isa = PBXGroup;
+			children = (
+				1C06BC9E1BFB2E2F00F50E7F /* AUUKitsTests.m */,
+				1C06BCA01BFB2E2F00F50E7F /* Info.plist */,
+			);
+			path = AUUKitsTests;
+			sourceTree = "<group>";
+		};
 		1CB4A8361BF96C3D00498F45 = {
 			isa = PBXGroup;
 			children = (
 				1CB4A8411BF96C3E00498F45 /* AUUKits */,
+				1C06BC9D1BFB2E2F00F50E7F /* AUUKitsTests */,
 				1CB4A8401BF96C3E00498F45 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -102,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				1CB4A83F1BF96C3E00498F45 /* AUUKits.app */,
+				1C06BC9C1BFB2E2F00F50E7F /* AUUKitsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -109,6 +152,7 @@
 		1CB4A8411BF96C3E00498F45 /* AUUKits */ = {
 			isa = PBXGroup;
 			children = (
+				1C06BC961BFB19E300F50E7F /* t.jpg */,
 				1CB4A8451BF96C3E00498F45 /* AppDelegate.h */,
 				1CB4A8461BF96C3E00498F45 /* AppDelegate.m */,
 				1CB4A8481BF96C3E00498F45 /* ViewController.h */,
@@ -152,6 +196,8 @@
 				1CB4A8B71BF98CFF00498F45 /* NSData+AUUEncryption.m */,
 				1CB4A8B91BF98D4200498F45 /* NSString+AUUEncryption.h */,
 				1CB4A8BA1BF98D4200498F45 /* NSString+AUUEncryption.m */,
+				1C06BC931BFB0FDA00F50E7F /* AUUKeychainAccess.h */,
+				1C06BC941BFB0FDA00F50E7F /* AUUKeychainAccess.m */,
 			);
 			path = Encryption;
 			sourceTree = "<group>";
@@ -171,6 +217,10 @@
 				1CB4A8B11BF988E000498F45 /* UIView+AUUCategory.m */,
 				1CB4A8B31BF989EE00498F45 /* UIView+AUUPlot.h */,
 				1CB4A8B41BF989EE00498F45 /* UIView+AUUPlot.m */,
+				1C06BCA61BFB326E00F50E7F /* UITextField+AUUCategory.h */,
+				1C06BCA71BFB326E00F50E7F /* UITextField+AUUCategory.m */,
+				1C06BCA91BFB33E800F50E7F /* UITextView+AUUCategory.h */,
+				1C06BCAA1BFB33E800F50E7F /* UITextView+AUUCategory.m */,
 			);
 			path = Kits;
 			sourceTree = "<group>";
@@ -224,6 +274,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1C06BC9B1BFB2E2F00F50E7F /* AUUKitsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C06BCA31BFB2E2F00F50E7F /* Build configuration list for PBXNativeTarget "AUUKitsTests" */;
+			buildPhases = (
+				1C06BC981BFB2E2F00F50E7F /* Sources */,
+				1C06BC991BFB2E2F00F50E7F /* Frameworks */,
+				1C06BC9A1BFB2E2F00F50E7F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1C06BCA21BFB2E2F00F50E7F /* PBXTargetDependency */,
+			);
+			name = AUUKitsTests;
+			productName = AUUKitsTests;
+			productReference = 1C06BC9C1BFB2E2F00F50E7F /* AUUKitsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		1CB4A83E1BF96C3E00498F45 /* AUUKits */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1CB4A8561BF96C3E00498F45 /* Build configuration list for PBXNativeTarget "AUUKits" */;
@@ -250,6 +318,11 @@
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Joyous Hu";
 				TargetAttributes = {
+					1C06BC9B1BFB2E2F00F50E7F = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = EHNB49T236;
+						TestTargetID = 1CB4A83E1BF96C3E00498F45;
+					};
 					1CB4A83E1BF96C3E00498F45 = {
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = EHNB49T236;
@@ -270,15 +343,24 @@
 			projectRoot = "";
 			targets = (
 				1CB4A83E1BF96C3E00498F45 /* AUUKits */,
+				1C06BC9B1BFB2E2F00F50E7F /* AUUKitsTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1C06BC9A1BFB2E2F00F50E7F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1CB4A83D1BF96C3E00498F45 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C06BC971BFB19E300F50E7F /* t.jpg in Resources */,
 				1CB4A8521BF96C3E00498F45 /* LaunchScreen.storyboard in Resources */,
 				1CB4A84F1BF96C3E00498F45 /* Assets.xcassets in Resources */,
 				1CB4A84D1BF96C3E00498F45 /* Main.storyboard in Resources */,
@@ -288,6 +370,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1C06BC981BFB2E2F00F50E7F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C06BC9F1BFB2E2F00F50E7F /* AUUKitsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1CB4A83B1BF96C3E00498F45 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -301,12 +391,15 @@
 				1CB4A8A01BF9853C00498F45 /* AUUJSONAdaptor.m in Sources */,
 				1CB4A89D1BF984CA00498F45 /* NSNumber+AUUCategory.m in Sources */,
 				1CB4A8B51BF989EE00498F45 /* UIView+AUUPlot.m in Sources */,
+				1C06BCA81BFB326E00F50E7F /* UITextField+AUUCategory.m in Sources */,
 				1CB4A8631BF96D1F00498F45 /* NSObject+AUUCategory.m in Sources */,
 				1CB4A8B21BF988E000498F45 /* UIView+AUUCategory.m in Sources */,
+				1C06BC951BFB0FDA00F50E7F /* AUUKeychainAccess.m in Sources */,
 				1CB4A8471BF96C3E00498F45 /* AppDelegate.m in Sources */,
 				1CB4A8441BF96C3E00498F45 /* main.m in Sources */,
 				1CB4A8AF1BF988BE00498F45 /* UILabel+AUUCategory.m in Sources */,
 				1CB4A8B81BF98CFF00498F45 /* NSData+AUUEncryption.m in Sources */,
+				1C06BCAB1BFB33E800F50E7F /* UITextView+AUUCategory.m in Sources */,
 				1CB4A8C41BF98EC600498F45 /* AUUStepMenu.m in Sources */,
 				1CB4A8A91BF9882D00498F45 /* UIImage+AUUCategory.m in Sources */,
 				1CB4A8C01BF98E0000498F45 /* AUUPopView.m in Sources */,
@@ -315,6 +408,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1C06BCA21BFB2E2F00F50E7F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1CB4A83E1BF96C3E00498F45 /* AUUKits */;
+			targetProxy = 1C06BCA11BFB2E2F00F50E7F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1CB4A84B1BF96C3E00498F45 /* Main.storyboard */ = {
@@ -336,6 +437,30 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1C06BCA41BFB2E2F00F50E7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = AUUKitsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = JinyouHu.AUUKitsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AUUKits.app/AUUKits";
+			};
+			name = Debug;
+		};
+		1C06BCA51BFB2E2F00F50E7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = AUUKitsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = JinyouHu.AUUKitsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AUUKits.app/AUUKits";
+			};
+			name = Release;
+		};
 		1CB4A8541BF96C3E00498F45 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -443,6 +568,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1C06BCA31BFB2E2F00F50E7F /* Build configuration list for PBXNativeTarget "AUUKitsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C06BCA41BFB2E2F00F50E7F /* Debug */,
+				1C06BCA51BFB2E2F00F50E7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		1CB4A83A1BF96C3D00498F45 /* Build configuration list for PBXProject "AUUKits" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

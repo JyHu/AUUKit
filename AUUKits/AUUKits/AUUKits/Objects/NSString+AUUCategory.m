@@ -11,22 +11,31 @@
 
 @implementation NSString (AUUCategory)
 
-- (CGSize)sizeWithContainSize:(CGSize)size font:(UIFont *)font
+- (CGSize)sizeWithContainSize:(CGSize)size
+                         font:(UIFont *)font
 {
-    return [self sizeWithContain:size attributes:@{NSFontAttributeName : font}];
+    return [self sizeWithContain:size
+                      attributes:@{NSFontAttributeName : font}];
 }
 
-- (CGSize)sizeWithContain:(CGSize)size attributes:(NSDictionary *)attributes
+- (CGSize)sizeWithContain:(CGSize)size
+               attributes:(NSDictionary *)attributes
 {
-    return [self sizeWithContain:size attributes:attributes options:NSStringDrawingUsesLineFragmentOrigin];
+    return [self sizeWithContain:size
+                      attributes:attributes
+                         options:NSStringDrawingUsesLineFragmentOrigin];
 }
 
-- (CGSize)sizeWithContain:(CGSize)size attributes:(NSDictionary *)attributes options:(NSStringDrawingOptions)options
+- (CGSize)sizeWithContain:(CGSize)size
+               attributes:(NSDictionary *)attributes
+                  options:(NSStringDrawingOptions)options
 {
     CGSize constriantSize;
     
     NSMutableAttributedString *countAttrString = [[NSMutableAttributedString alloc] initWithString:self];
-    constriantSize = [countAttrString boundingRectWithSize:size options:options context:nil].size;
+    constriantSize = [countAttrString boundingRectWithSize:size
+                                                   options:options
+                                                   context:nil].size;
     
     return constriantSize;
 }
@@ -86,7 +95,8 @@
     return [[dateFormatter dateFromString:self] dateByAddingTimeInterval:[[NSTimeZone systemTimeZone] secondsFromGMT]];
 }
 
-+ (NSString *)generalWithLength:(NSInteger)length characterElements:(AUUStringGeneralElement)elements
++ (NSString *)generalWithLength:(NSInteger)length
+              characterElements:(AUUStringGeneralElement)elements
 {
     if (length < 0)
     {
@@ -138,7 +148,8 @@
     return resultStr;
 }
 
-+ (NSString *)generalWithSection:(NSRange)section characterElements:(AUUStringGeneralElement)elements
++ (NSString *)generalWithSection:(NSRange)section
+               characterElements:(AUUStringGeneralElement)elements
 {
     NSInteger length = arc4random()%section.length + section.location;
     
@@ -276,14 +287,20 @@ static void * p_ResultsFromRegularExpressionKey = (void *)@"p_ResultsFromRegular
 
 - (NSArray *)RERangesMatchedWithPartten:(NSString *)regular
 {
-    return [self RERangesMatchedWithPartten:regular REOption:NSRegularExpressionCaseInsensitive matchOptions:0];
+    return [self RERangesMatchedWithPartten:regular
+                                   REOption:NSRegularExpressionCaseInsensitive
+                               matchOptions:0];
 }
 
-- (NSArray *)RERangesMatchedWithPartten:(NSString *)regular REOption:(NSRegularExpressionOptions)rOptions matchOptions:(NSMatchingOptions)mOptions
+- (NSArray *)RERangesMatchedWithPartten:(NSString *)regular
+                               REOption:(NSRegularExpressionOptions)rOptions
+                           matchOptions:(NSMatchingOptions)mOptions
 {
     NSError *rError;
     
-    NSRegularExpression *reg = [[NSRegularExpression alloc] initWithPattern:regular options:rOptions error:&rError];
+    NSRegularExpression *reg = [[NSRegularExpression alloc] initWithPattern:regular
+                                                                    options:rOptions
+                                                                      error:&rError];
     
     if (rError)
     {
@@ -292,7 +309,9 @@ static void * p_ResultsFromRegularExpressionKey = (void *)@"p_ResultsFromRegular
     
     NSMutableArray *rangeResultsArr = [[NSMutableArray alloc] init];
     
-    NSArray *matches = [reg matchesInString:self options:mOptions range:NSMakeRange(0, self.length)];
+    NSArray *matches = [reg matchesInString:self
+                                    options:mOptions
+                                      range:NSMakeRange(0, self.length)];
     
     for (NSTextCheckingResult *match in matches)
     {
@@ -317,12 +336,18 @@ static void * p_ResultsFromRegularExpressionKey = (void *)@"p_ResultsFromRegular
 
 - (NSArray *)REResultsMatchedWithPartten:(NSString *)regular
 {
-    return [self REResultsMatchedWithPartten:regular REOption:NSRegularExpressionCaseInsensitive matchOptions:0];
+    return [self REResultsMatchedWithPartten:regular
+                                    REOption:NSRegularExpressionCaseInsensitive
+                                matchOptions:0];
 }
 
-- (NSArray *)REResultsMatchedWithPartten:(NSString *)regular REOption:(NSRegularExpressionOptions)rOptions matchOptions:(NSMatchingOptions)mOptions
+- (NSArray *)REResultsMatchedWithPartten:(NSString *)regular
+                                REOption:(NSRegularExpressionOptions)rOptions
+                            matchOptions:(NSMatchingOptions)mOptions
 {
-    NSArray *ranges = [self RERangesMatchedWithPartten:regular REOption:rOptions matchOptions:mOptions];
+    NSArray *ranges = [self RERangesMatchedWithPartten:regular
+                                              REOption:rOptions
+                                          matchOptions:mOptions];
     
     return [self REResultsWithRanges:ranges];
 }
@@ -359,12 +384,18 @@ static void * p_ResultsFromRegularExpressionKey = (void *)@"p_ResultsFromRegular
 
 - (NSString *)REResultFirstMatchWithPattern:(NSString *)pattern
 {
-    return [self REResultFirstMatchWithPattern:pattern REOptions:NSRegularExpressionCaseInsensitive matchOptions:0];
+    return [self REResultFirstMatchWithPattern:pattern
+                                     REOptions:NSRegularExpressionCaseInsensitive
+                                  matchOptions:0];
 }
 
-- (NSString *)REResultFirstMatchWithPattern:(NSString *)pattern REOptions:(NSRegularExpressionOptions)rOptions matchOptions:(NSMatchingOptions)mOptions
+- (NSString *)REResultFirstMatchWithPattern:(NSString *)pattern
+                                  REOptions:(NSRegularExpressionOptions)rOptions
+                               matchOptions:(NSMatchingOptions)mOptions
 {
-    NSArray *results = [self REResultsMatchedWithPartten:pattern REOption:rOptions matchOptions:mOptions];
+    NSArray *results = [self REResultsMatchedWithPartten:pattern
+                                                REOption:rOptions
+                                            matchOptions:mOptions];
     
     if (!results || results.count == 0)
     {
@@ -383,12 +414,14 @@ static void * p_ResultsFromRegularExpressionKey = (void *)@"p_ResultsFromRegular
 
 - (BOOL) isLegalURL
 {
-    return [self isLegalObjWithPattern:@"(https://|http://)?([\\w-]+\\.)+[\\w-]+(/[\\w- ./?%&=]*)?"];
+    NSString *reg = @"(https://|http://)?([\\w-]+\\.)+[\\w-]+(/[\\w- ./?%&=]*)?";
+    return [self isLegalObjWithPattern:reg];
 }
 
 - (BOOL) isLegalEMail
 {
-    return [self isLegalObjWithPattern:@"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"];
+    NSString *reg = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+    return [self isLegalObjWithPattern:reg];
 }
 
 - (BOOL) isLegalChinaCellPhoneNumber
@@ -483,16 +516,29 @@ static void * p_ResultsFromRegularExpressionKey = (void *)@"p_ResultsFromRegular
     return NO;
 }
 
-- (NSString *)REReplaceOccuredStringByPattern:(NSString *)regular with:(NSString *)replacedString
+- (NSString *)REReplaceOccuredStringByPattern:(NSString *)regular
+                                         with:(NSString *)replacedString
 {
-    return [self REReplaceOccuredStringByPattern:regular with:replacedString reOptions:NSRegularExpressionCaseInsensitive matchOptions:0];
+    return [self REReplaceOccuredStringByPattern:regular
+                                            with:replacedString
+                                       reOptions:NSRegularExpressionCaseInsensitive
+                                    matchOptions:0];
 }
 
-- (NSString *)REReplaceOccuredStringByPattern:(NSString *)regular with:(NSString *)replacedString reOptions:(NSRegularExpressionOptions)rOptions matchOptions:(NSMatchingOptions)mOptions
+- (NSString *)REReplaceOccuredStringByPattern:(NSString *)regular
+                                         with:(NSString *)replacedString
+                                    reOptions:(NSRegularExpressionOptions)rOptions
+                                 matchOptions:(NSMatchingOptions)mOptions
 {
-    NSRegularExpression *regularExpression = [NSRegularExpression regularExpressionWithPattern:regular options:rOptions error:nil];
+    NSRegularExpression *regularExpression =
+                            [NSRegularExpression regularExpressionWithPattern:regular
+                                                                      options:rOptions
+                                                                        error:nil];
     
-    return [[regularExpression stringByReplacingMatchesInString:self options:mOptions range:NSMakeRange(0, self.length) withTemplate:replacedString] copy];
+    return [[regularExpression stringByReplacingMatchesInString:self
+                                                        options:mOptions
+                                                          range:NSMakeRange(0, self.length)
+                                                   withTemplate:replacedString] copy];
 }
 
 - (NSArray *)splitWithPattern:(NSString *)pattern

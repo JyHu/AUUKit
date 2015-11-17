@@ -10,6 +10,7 @@
 
 @interface UILabel (AUUCategory)
 
+#warning - 
 @property (assign, nonatomic) BOOL autoFit;
 @property (assign, nonatomic) CGFloat autoFitWidth;
 

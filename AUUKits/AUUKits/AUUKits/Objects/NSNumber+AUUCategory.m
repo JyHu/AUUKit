@@ -8,6 +8,7 @@
 
 #import "NSNumber+AUUCategory.h"
 #include <math.h>
+#import "AUUDebugs.h"
 
 BOOL doubleEqual(double d1, double d2)
 {
@@ -32,7 +33,7 @@ NSUInteger bitUpdate(NSUInteger num, NSUInteger fIndex, NSUInteger length, NSUIn
     
     if (value >= max)
     {
-        NSLog(@"要替换的值越界，最大可替换的值是%@，而要替换的值是%@", @(max), @(value));
+        AUUAsserts(0, @"要替换的值越界，最大可替换的值是%@，而要替换的值是%@", @(max), @(value));
         return num;
     }
     
@@ -46,8 +47,7 @@ NSUInteger bitValue(NSUInteger num, NSUInteger fIndex, NSUInteger length)
     
     if (maxLocationGet >= maxLocationSupport)
     {
-        NSLog(@"要取的位置越界，最大可取位置到%@位，而当前要取到的数据是到%@位", @(maxLocationSupport), @(maxLocationGet));
-        
+        AUUAsserts(0, @"要取的位置越界，最大可取位置到%@位，而当前要取到的数据是到%@位", @(maxLocationSupport), @(maxLocationGet));
         return 0;
     }
     

@@ -484,11 +484,4 @@ extern NSTimeInterval const AUUWeeksSeconds;    /* 一周的秒数 */
  */
 - (void)lastDayS;
 
-/**
- *  @author JyHu, 15-05-20 16:05:09
- *
- *  @brief  log描述
- */
-- (void)description;
-
 @end

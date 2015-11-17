@@ -7,6 +7,7 @@
 //
 
 #import "UIImage+AUUCategory.h"
+#import "UIColor+AUUCategory.h"
 
 static void addRoundedRectToPath(CGContextRef context,CGRect rect,float radius,AUUImageRoundedCorner cornerMask)
 {
@@ -149,6 +150,103 @@ static void addRoundedRectToPath(CGContextRef context,CGRect rect,float radius,A
 + (UIImage *)imageWithColor:(UIColor *)color
 {
     return [self imageWithColor:color withSize:CGSizeMake(1, 1)];
+}
+
+- (UIColor *)colorAtPixel:(CGPoint)point
+{
+    if (!CGRectContainsPoint(CGRectMake(0.0f, 0.0f, self.size.width, self.size.height), point))
+    {
+        return nil;
+    }
+    
+    NSInteger pointX = trunc(point.x);
+    NSInteger pointY = trunc(point.y);
+    
+    CGImageRef cgImage = self.CGImage;
+    NSUInteger width = self.size.width;
+    NSUInteger height = self.size.height;
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    
+    unsigned int bytesPerpixel = 4;
+    unsigned int bytesPerRow = bytesPerpixel * 1;
+    
+    NSUInteger bitsPerComponent = 8;
+    unsigned char pixelData[4] = {0, 0, 0, 0};
+    CGContextRef context = CGBitmapContextCreate(pixelData, 1, 1, bitsPerComponent, bytesPerRow, colorSpace, kCGImageAlphaPremultipliedLast);
+    CGColorSpaceRelease(colorSpace);
+    CGContextSetBlendMode(context, kCGBlendModeCopy);
+    
+    CGContextTranslateCTM(context, -pointX, pointY - (CGFloat)height);
+    CGContextDrawImage(context, CGRectMake(0.0f, 0.0f, (CGFloat)width, (CGFloat)height), cgImage);
+    CGContextRelease(context);
+    
+    CGFloat red = (CGFloat)pixelData[0];            // 0 ~ 255.0
+    CGFloat green = (CGFloat)pixelData[1];          // 0 ~ 255.0
+    CGFloat blue = (CGFloat)pixelData[2];           // 0 ~ 255.0
+    CGFloat alpha = (CGFloat)pixelData[3] / 255.0f; // 0 ~ 1.0
+    
+    return RGBA(red, green, blue, alpha);
+}
+
+#warning -
+- (UIImage *)croppingInRect:(CGRect)rect
+{
+    return [UIImage new];
+}
+
+#warning -
+- (UIImage *)imageWithMaskImage:(UIImage *)maskImage
+{
+    CGImageRef maskRef = maskImage.CGImage;
+    
+    CGImageRef mask = CGImageMaskCreate(CGImageGetWidth(maskRef),
+                                        CGImageGetHeight(maskRef),
+                                        CGImageGetBitsPerComponent(maskRef),
+                                        CGImageGetBitsPerPixel(maskRef),
+                                        CGImageGetBytesPerRow(maskRef),
+                                        CGImageGetDataProvider(maskRef),
+                                        NULL, false);
+    
+    CGImageRef masked = CGImageCreateWithMask([self CGImage], mask);
+    
+    return [UIImage imageWithCGImage:masked];
+}
+
+#warning -
+- (UIImage *)scaleToSize:(CGSize)size
+{
+    CGFloat width = CGImageGetWidth(self.CGImage);
+    CGFloat height = CGImageGetHeight(self.CGImage);
+    
+    float verticalRatio = size.height * 1.0 / height;
+    float horizontalRatio = size.width * 1.0 / width;
+    
+    float ratio = 1;
+    
+    if (verticalRatio > 1 && horizontalRatio > 1)
+    {
+        ratio = verticalRatio > horizontalRatio ? horizontalRatio : verticalRatio;
+    }
+    else
+    {
+        ratio = verticalRatio < horizontalRatio ? verticalRatio : horizontalRatio;
+    }
+    
+    width = width *ratio;
+    height = height * ratio;
+    
+    CGFloat xPos = (size.width - width) / 2.0;
+    CGFloat yPos = (size.height - height) / 2.0;
+    
+    UIGraphicsBeginImageContext(size);
+    
+    [self drawInRect:CGRectMake(xPos, yPos, width, height)];
+    
+    UIImage *scaledImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    return scaledImage;
 }
 
 @end

@@ -8,6 +8,11 @@
 
 #import "UIColor+AUUCategory.h"
 
+UIColor *colorWithRGBA(RGBA rgba)
+{
+    return RGBA(rgba.R, rgba.G, rgba.B, rgba.A);
+}
+
 @implementation UIColor (AUUCategory)
 
 + (UIColor *)randomColor
