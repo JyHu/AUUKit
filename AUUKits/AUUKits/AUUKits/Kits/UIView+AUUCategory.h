@@ -45,6 +45,8 @@ void resetViewSize(UIView *view, CGSize size);          /* 重设View的size */
 void resetViewCenterX(UIView *view, CGFloat cx);        /* 重设View的中心点x坐标 */
 void resetViewCenterY(UIView *view, CGFloat cy);        /* 重设View的中心点y坐标 */
 
+CGFloat distanceBetween(CGPoint pt1, CGPoint pt2);
+
 
 typedef void (^AUUAnimationHandleBlock) (void);
 
@@ -70,6 +72,8 @@ typedef void (^AUUAnimationHandleBlock) (void);
  *  @return self
  */
 + (instancetype)instanceWithFrame:(CGRect)frame;
+
++ (instancetype)instanceWithEdgeInsets:(UIEdgeInsets)edg withSuperView:(UIView *)view;
 
 /**
  *  @author JyHu, 15-05-22 17:05:58
@@ -126,6 +130,10 @@ typedef void (^AUUAnimationHandleBlock) (void);
  *  获取、设置控件的point
  */
 @property (assign, nonatomic) CGPoint origin;
+
+@property (assign, nonatomic) CGFloat centerX;
+
+@property (assign, nonatomic) CGFloat centerY;
 
 /**
  *  @author JyHu, 15-05-22 17:05:57

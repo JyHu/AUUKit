@@ -71,6 +71,11 @@ void resetViewCenterY(UIView *view, CGFloat cy){
     view.center = CGPointMake(view.center.x, cy);
 }
 
+CGFloat distanceBetween(CGPoint pt1, CGPoint pt2)
+{
+    return sqrt(pow(pt1.x - pt2.x, 2) + pow(pt1.y - pt2.y, 2));
+}
+
 @implementation UIView (AUUCategory)
 
 + (instancetype)instance
@@ -81,6 +86,15 @@ void resetViewCenterY(UIView *view, CGFloat cy){
 + (instancetype)instanceWithFrame:(CGRect)frame
 {
     return [[[self class] alloc] initWithFrame:frame];
+}
+
++ (instancetype)instanceWithEdgeInsets:(UIEdgeInsets)edg
+                         withSuperView:(UIView *)view
+{
+    CGRect r = CGRectMake(edg.left, edg.top,
+                          view.width - edg.left - edg.right,
+                          view.height - edg.top - edg.bottom);
+    return [[[self class] alloc] initWithFrame:r];
 }
 
 #pragma mark - Frame 操作
@@ -112,6 +126,14 @@ void resetViewCenterY(UIView *view, CGFloat cy){
 - (CGPoint)origin   { return self.frame.origin; }
 
 - (void)setOrigin:(CGPoint)origin { resetViewOrigin(self, origin); }
+
+- (CGFloat)centerX  { return self.center.x; }
+
+- (void)setCenterX:(CGFloat)centerX { resetViewCenterX(self, centerX); }
+
+- (CGFloat)centerY  { return self.center.y; }
+
+- (void)setCenterY:(CGFloat)centerY { resetViewCenterY(self, centerY); }
 
 - (void)setIncreaseHeight:(CGFloat)increaseHeight
 {

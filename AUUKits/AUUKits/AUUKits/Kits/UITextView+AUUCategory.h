@@ -10,6 +10,6 @@
 
 @interface UITextView (AUUCategory) <UITextViewDelegate>
 
-- (void)textChanged:(void (^)(NSString *text, UITextField *tf))changedBlock;
+//- (void)textChanged:(void (^)(NSString *text, UITextField *tf))changedBlock;
 
 @end

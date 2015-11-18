@@ -67,7 +67,7 @@ typedef enum{
          *
          *  @brief  Debug Log等级的设定
          */
-        #define AUU_SET_DEBUG_LEVEL(x) static int debugLevel = AUUDebugLevelDebug
+        #define AUU_SET_DEBUG_LEVEL(x) static int debugLevel = AUUDebugLevelDebug;
 
         /**
          *  @author JyHu, 15-11-16 15:11:40
@@ -76,14 +76,12 @@ typedef enum{
          */
         #define AUUError(format, ...)                                                                                       \
             do{                                                                                                             \
-                if (debugLevel >= AUUDebugLevelError){                                                                      \
-                    printf("\n******************************* Error *******************************\n");                    \
-                    printf("* %s\n", [[NSString stringWithFormat:@"%@", [NSDate date]] UTF8String]);                        \
-                    printf("* [%s:%d] %s\n",  [[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String],    \
-                                        __LINE__,                                                                           \
-                                        [[NSString stringWithFormat:(format),## __VA_ARGS__] UTF8String]);                  \
-                    printf("*********************************************************************\n");                      \
-                }                                                                                                           \
+                printf("\n******************************* Error *******************************\n");                    \
+                printf("* %s\n", [[NSString stringWithFormat:@"%@", [NSDate date]] UTF8String]);                        \
+                printf("* [%s:%d] %s\n",  [[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String],    \
+                                    __LINE__,                                                                           \
+                                    [[NSString stringWithFormat:(format),## __VA_ARGS__] UTF8String]);                  \
+                printf("*********************************************************************\n");                      \
             }while(0)
 
 
@@ -94,11 +92,9 @@ typedef enum{
          */
         #define AUUDebug(format, ...)                                                                                       \
             do{                                                                                                             \
-                if (debugLevel >= AUUDebugLevelDebug){                                                                      \
-                    printf("D:- [%s:%d] %s\n",    [[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String],  \
-                                                __LINE__,                                                                   \
-                                                [[NSString stringWithFormat:(format),## __VA_ARGS__] UTF8String]);          \
-                }                                                                                                           \
+                printf("D:- [%s:%d] %s\n",    [[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String],  \
+                                            __LINE__,                                                                   \
+                                            [[NSString stringWithFormat:(format),## __VA_ARGS__] UTF8String]);          \
             }while(0)
 
 

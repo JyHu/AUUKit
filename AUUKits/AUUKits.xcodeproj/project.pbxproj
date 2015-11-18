@@ -12,6 +12,9 @@
 		1C06BC9F1BFB2E2F00F50E7F /* AUUKitsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C06BC9E1BFB2E2F00F50E7F /* AUUKitsTests.m */; };
 		1C06BCA81BFB326E00F50E7F /* UITextField+AUUCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C06BCA71BFB326E00F50E7F /* UITextField+AUUCategory.m */; };
 		1C06BCAB1BFB33E800F50E7F /* UITextView+AUUCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C06BCAA1BFB33E800F50E7F /* UITextView+AUUCategory.m */; };
+		1C06BCAE1BFC0F2D00F50E7F /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C06BCAD1BFC0F2D00F50E7F /* DrawView.m */; };
+		1C06BCB21BFC1ECE00F50E7F /* AUUColorPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C06BCB11BFC1ECE00F50E7F /* AUUColorPickerView.m */; };
+		1C06BCB41BFC2D0800F50E7F /* color_wheel.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C06BCB31BFC2D0800F50E7F /* color_wheel.png */; };
 		1CB4A8441BF96C3E00498F45 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CB4A8431BF96C3E00498F45 /* main.m */; };
 		1CB4A8471BF96C3E00498F45 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CB4A8461BF96C3E00498F45 /* AppDelegate.m */; };
 		1CB4A84A1BF96C3E00498F45 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CB4A8491BF96C3E00498F45 /* ViewController.m */; };
@@ -34,6 +37,8 @@
 		1CB4A8BB1BF98D4200498F45 /* NSString+AUUEncryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CB4A8BA1BF98D4200498F45 /* NSString+AUUEncryption.m */; };
 		1CB4A8C01BF98E0000498F45 /* AUUPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CB4A8BF1BF98E0000498F45 /* AUUPopView.m */; };
 		1CB4A8C41BF98EC600498F45 /* AUUStepMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CB4A8C31BF98EC600498F45 /* AUUStepMenu.m */; };
+		1CC8F5EF1BFC51C000A081F4 /* AUUColorSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CC8F5EE1BFC51C000A081F4 /* AUUColorSlider.m */; };
+		1CC8F5F21BFC53E400A081F4 /* AUUColorPickerIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CC8F5F11BFC53E400A081F4 /* AUUColorPickerIndicator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +62,11 @@
 		1C06BCA71BFB326E00F50E7F /* UITextField+AUUCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+AUUCategory.m"; sourceTree = "<group>"; };
 		1C06BCA91BFB33E800F50E7F /* UITextView+AUUCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+AUUCategory.h"; sourceTree = "<group>"; };
 		1C06BCAA1BFB33E800F50E7F /* UITextView+AUUCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+AUUCategory.m"; sourceTree = "<group>"; };
+		1C06BCAC1BFC0F2D00F50E7F /* DrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawView.h; sourceTree = "<group>"; };
+		1C06BCAD1BFC0F2D00F50E7F /* DrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
+		1C06BCB01BFC1ECE00F50E7F /* AUUColorPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUColorPickerView.h; sourceTree = "<group>"; };
+		1C06BCB11BFC1ECE00F50E7F /* AUUColorPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUUColorPickerView.m; sourceTree = "<group>"; };
+		1C06BCB31BFC2D0800F50E7F /* color_wheel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = color_wheel.png; sourceTree = "<group>"; };
 		1CB4A83F1BF96C3E00498F45 /* AUUKits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AUUKits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CB4A8431BF96C3E00498F45 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1CB4A8451BF96C3E00498F45 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -102,6 +112,10 @@
 		1CB4A8BF1BF98E0000498F45 /* AUUPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUUPopView.m; sourceTree = "<group>"; };
 		1CB4A8C21BF98EC600498F45 /* AUUStepMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUStepMenu.h; sourceTree = "<group>"; };
 		1CB4A8C31BF98EC600498F45 /* AUUStepMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUUStepMenu.m; sourceTree = "<group>"; };
+		1CC8F5ED1BFC51C000A081F4 /* AUUColorSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUColorSlider.h; sourceTree = "<group>"; };
+		1CC8F5EE1BFC51C000A081F4 /* AUUColorSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUUColorSlider.m; sourceTree = "<group>"; };
+		1CC8F5F01BFC53E400A081F4 /* AUUColorPickerIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUColorPickerIndicator.h; sourceTree = "<group>"; };
+		1CC8F5F11BFC53E400A081F4 /* AUUColorPickerIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUUColorPickerIndicator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +145,20 @@
 			path = AUUKitsTests;
 			sourceTree = "<group>";
 		};
+		1C06BCAF1BFC1E3F00F50E7F /* ColorPicker */ = {
+			isa = PBXGroup;
+			children = (
+				1C06BCB01BFC1ECE00F50E7F /* AUUColorPickerView.h */,
+				1C06BCB11BFC1ECE00F50E7F /* AUUColorPickerView.m */,
+				1CC8F5ED1BFC51C000A081F4 /* AUUColorSlider.h */,
+				1CC8F5EE1BFC51C000A081F4 /* AUUColorSlider.m */,
+				1CC8F5F01BFC53E400A081F4 /* AUUColorPickerIndicator.h */,
+				1CC8F5F11BFC53E400A081F4 /* AUUColorPickerIndicator.m */,
+				1C06BCB31BFC2D0800F50E7F /* color_wheel.png */,
+			);
+			path = ColorPicker;
+			sourceTree = "<group>";
+		};
 		1CB4A8361BF96C3D00498F45 = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +185,8 @@
 				1CB4A8461BF96C3E00498F45 /* AppDelegate.m */,
 				1CB4A8481BF96C3E00498F45 /* ViewController.h */,
 				1CB4A8491BF96C3E00498F45 /* ViewController.m */,
+				1C06BCAC1BFC0F2D00F50E7F /* DrawView.h */,
+				1C06BCAD1BFC0F2D00F50E7F /* DrawView.m */,
 				1CB4A84B1BF96C3E00498F45 /* Main.storyboard */,
 				1CB4A8591BF96CB500498F45 /* AUUKits */,
 				1CB4A8421BF96C3E00498F45 /* Supporting Files */,
@@ -247,6 +277,7 @@
 		1CB4A85D1BF96CB500498F45 /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
+				1C06BCAF1BFC1E3F00F50E7F /* ColorPicker */,
 				1CB4A8C11BF98EB600498F45 /* StepMenu */,
 				1CB4A8BC1BF98DEA00498F45 /* PopView */,
 			);
@@ -362,6 +393,7 @@
 			files = (
 				1C06BC971BFB19E300F50E7F /* t.jpg in Resources */,
 				1CB4A8521BF96C3E00498F45 /* LaunchScreen.storyboard in Resources */,
+				1C06BCB41BFC2D0800F50E7F /* color_wheel.png in Resources */,
 				1CB4A84F1BF96C3E00498F45 /* Assets.xcassets in Resources */,
 				1CB4A84D1BF96C3E00498F45 /* Main.storyboard in Resources */,
 			);
@@ -384,16 +416,19 @@
 			files = (
 				1CB4A8BB1BF98D4200498F45 /* NSString+AUUEncryption.m in Sources */,
 				1CB4A8AC1BF9888600498F45 /* UIImageView+AUUCategory.m in Sources */,
+				1C06BCB21BFC1ECE00F50E7F /* AUUColorPickerView.m in Sources */,
 				1CB4A84A1BF96C3E00498F45 /* ViewController.m in Sources */,
 				1CB4A89A1BF980F600498F45 /* NSString+AUUCategory.m in Sources */,
 				1CB4A8A31BF985D300498F45 /* NSDate+AUUCategory.m in Sources */,
 				1CB4A8661BF96F0200498F45 /* NSArray+AUUCategory.m in Sources */,
+				1C06BCAE1BFC0F2D00F50E7F /* DrawView.m in Sources */,
 				1CB4A8A01BF9853C00498F45 /* AUUJSONAdaptor.m in Sources */,
 				1CB4A89D1BF984CA00498F45 /* NSNumber+AUUCategory.m in Sources */,
 				1CB4A8B51BF989EE00498F45 /* UIView+AUUPlot.m in Sources */,
 				1C06BCA81BFB326E00F50E7F /* UITextField+AUUCategory.m in Sources */,
 				1CB4A8631BF96D1F00498F45 /* NSObject+AUUCategory.m in Sources */,
 				1CB4A8B21BF988E000498F45 /* UIView+AUUCategory.m in Sources */,
+				1CC8F5EF1BFC51C000A081F4 /* AUUColorSlider.m in Sources */,
 				1C06BC951BFB0FDA00F50E7F /* AUUKeychainAccess.m in Sources */,
 				1CB4A8471BF96C3E00498F45 /* AppDelegate.m in Sources */,
 				1CB4A8441BF96C3E00498F45 /* main.m in Sources */,
@@ -402,6 +437,7 @@
 				1C06BCAB1BFB33E800F50E7F /* UITextView+AUUCategory.m in Sources */,
 				1CB4A8C41BF98EC600498F45 /* AUUStepMenu.m in Sources */,
 				1CB4A8A91BF9882D00498F45 /* UIImage+AUUCategory.m in Sources */,
+				1CC8F5F21BFC53E400A081F4 /* AUUColorPickerIndicator.m in Sources */,
 				1CB4A8C01BF98E0000498F45 /* AUUPopView.m in Sources */,
 				1CB4A8A61BF987FB00498F45 /* UIColor+AUUCategory.m in Sources */,
 			);
@@ -575,6 +611,7 @@
 				1C06BCA51BFB2E2F00F50E7F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1CB4A83A1BF96C3D00498F45 /* Build configuration list for PBXProject "AUUKits" */ = {
 			isa = XCConfigurationList;

@@ -17,6 +17,8 @@ typedef struct{
     CGFloat A;
 } RGBA;
 
+RGBA AUURGBAMake(CGFloat R, CGFloat G, CGFloat B, CGFloat A);
+
 UIColor *colorWithRGBA(RGBA rgba);
 
 @interface UIColor (AUUCategory)
@@ -61,5 +63,15 @@ UIColor *colorWithRGBA(RGBA rgba);
  */
 - (RGBA)rgba;
 
++ (UIColor *)colorWithRGBA:(RGBA)rgba;
+
++ (UIColor *)regionColorFrom:(UIColor *)fColor toColor:(UIColor *)tColor atLocation:(CGFloat)location;
+
+- (UIColor *)updateRed:(CGFloat)red;
+- (UIColor *)updateGreen:(CGFloat)green;
+- (UIColor *)updateBlue:(CGFloat)blue;
+- (UIColor *)updateAlpha:(CGFloat)alpha;
+
+- (UIColor *)reverse;
 
 @end

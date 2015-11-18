@@ -230,7 +230,7 @@ AUULocation AUULocationMake(CGFloat x, CGFloat y);
  *  @param startAngle 开始的弧形角度
  *  @param endAngle   结束的弧形角度
  *  @param width      线宽
- *  @param clockwise  是否是补角绘制
+ *  @param clockwise  0为顺时针，1为逆时针
  */
 - (void)drawArcFromCenter:(CGPoint)center
                    radius:(CGFloat)radius
