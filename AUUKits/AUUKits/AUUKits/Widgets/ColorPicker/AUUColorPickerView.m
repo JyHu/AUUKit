@@ -107,18 +107,18 @@ NSString *const colorReelImageName = @"color_wheel";
     [self.colorReelImageView addSubview:self.colorRellIndicator];
     
     /* 从取色的色值到黑色的色值区间view */
-    self.regionColorView = [AUUColorSlider instanceWithFrame:CGRectMake(20,
-                                                                        self.colorReelImageView.viewMaxY + 20,
-                                                                        self.width - 40, 40)];
-    [self.regionColorView updateWithFromColor:[UIColor redColor] endColor:[UIColor blackColor]];
+    self.regionColorView = [[AUUColorSlider alloc] initWithFrame:CGRectMake(20,
+                                                                            self.colorReelImageView.viewMaxY + 20,
+                                                                            self.width - 40, 40)
+                                                    coverageType:AUUColorCoverageTypeGradient];
+    [self.regionColorView updateWithRegionColor:[UIColor redColor]];
     [self addSubview:self.regionColorView];
     
     /* alpha区间view */
-    self.alphaView = [AUUColorSlider instanceWithFrame:CGRectMake(self.regionColorView.xOrigin,
-                                                                  self.regionColorView.viewMaxY + 20,
-                                                                  self.regionColorView.width,
-                                                                  self.regionColorView.height)];
-    [self.alphaView updateWithFromColor:[UIColor redColor] endColor:[[UIColor redColor] colorWithAlphaComponent:0.0]];
+    self.alphaView = [[AUUColorSlider alloc] initWithFrame:self.regionColorView.frame
+                                              coverageType:AUUColorCoverageTypeRegion];
+    self.alphaView.yOrigin = self.regionColorView.viewMaxY + 20;
+    [self.alphaView updateWithAlphaColor:[UIColor redColor]];
     [self addSubview:self.alphaView];
     
     /* 色值对比的容器view */
@@ -148,7 +148,7 @@ NSString *const colorReelImageName = @"color_wheel";
     
     [self.regionColorView colorSelectedCompletion:^(UIColor *regionColor) {
         
-        [self.alphaView updateWithFromColor:regionColor endColor:[regionColor colorWithAlphaComponent:0.0]];
+        [self.alphaView updateWithAlphaColor:regionColor];
     }];
     
     [self.alphaView colorSelectedCompletion:^(UIColor *alphaColor) {
@@ -193,7 +193,7 @@ NSString *const colorReelImageName = @"color_wheel";
 
 - (void)updateWithReelColor
 {
-    [self.regionColorView updateWithFromColor:self.reelSelectedColor endColor:[UIColor blackColor]];
+    [self.regionColorView updateWithRegionColor:self.reelSelectedColor];
     [self.colorRellIndicator updateIndicatorColor:[self.reelSelectedColor reverse]];
 }
 
