@@ -120,8 +120,7 @@
 //    [self.view addSubview:slider];
     
     
-//    AUUColorPickerIndicator *indicator = [AUUColorPickerIndicator instanceWithFrame:CGRectMake(20, 100, 160, 400)];
-//    indicator.backgroundColor = RGBA(227, 223, 227, 1);
+//    AUUColorPickerIndicator *indicator = [AUUColorPickerIndicator instanceWithFrame:CGRectMake(20, 100, 200, 200)];
 //    [self.view addSubview:indicator];
 }
 

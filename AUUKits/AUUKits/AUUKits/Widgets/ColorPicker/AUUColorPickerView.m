@@ -12,25 +12,34 @@
 #import "UIImage+AUUCategory.h"
 #import "AUUColorSlider.h"
 #import "UILabel+AUUCategory.h"
+#import "AUUColorPickerIndicator.h"
 
 NSString *const colorReelImageName = @"color_wheel";
 
 @interface AUUColorPickerView()
 
+/* 颜色色值的图片 */
 @property (retain, nonatomic) UIImageView *colorReelImageView;
 
-@property (retain, nonatomic) UIImageView *colorRellIndicator;
+/* 图片颜色选择的指示器 */
+@property (retain, nonatomic) AUUColorPickerIndicator *colorRellIndicator;
 
+/* 选择的色值到黑色的区间色选择器 */
 @property (retain, nonatomic) AUUColorSlider *regionColorView;
 
+/* 颜色的透明度的选择器 */
 @property (retain, nonatomic) AUUColorSlider *alphaView;
 
+/* 颜色比对的view */
 @property (retain, nonatomic) UIView *colorConstrastView;
 
+/* 实时显示颜色的View */
 @property (retain, nonatomic) UIView *realTimeColorView;
 
+/* 是否实时显示背景色的按钮 */
 @property (retain, nonatomic) UIButton *needBackgroundRealtimeColorShowButton;
 
+/* 颜色信息的label */
 @property (retain, nonatomic) UILabel *colorLabel;
 
 //@property (retain, nonatomic) UIScrollView *containingScrollView;
@@ -94,6 +103,9 @@ NSString *const colorReelImageName = @"color_wheel";
     self.colorReelImageView.contentMode = UIViewContentModeScaleAspectFit;
     [self addSubview:self.colorReelImageView];
     
+    self.colorRellIndicator = [AUUColorPickerIndicator instanceWithFrame:CGRectMake(0, 0, 20, 20)];
+    [self.colorReelImageView addSubview:self.colorRellIndicator];
+    
     /* 从取色的色值到黑色的色值区间view */
     self.regionColorView = [AUUColorSlider instanceWithFrame:CGRectMake(20,
                                                                         self.colorReelImageView.viewMaxY + 20,
@@ -127,7 +139,7 @@ NSString *const colorReelImageName = @"color_wheel";
     [self.colorConstrastView addSubview:self.realTimeColorView];
     
     self.colorLabel = [UILabel instanceWithFrame:CGRectMake(0, 0, 0, 0)];
-    [self.colorLabel setFontSize:12.0];
+    [self.colorLabel setFontSize:8.0];
     self.colorLabel.textColor = [UIColor blackColor];
     self.colorLabel.textAlignment = NSTextAlignmentRight;
     self.colorLabel.lineBreakMode = NSLineBreakByCharWrapping;
@@ -145,27 +157,27 @@ NSString *const colorReelImageName = @"color_wheel";
         self.selectedColor = alphaColor;
         [self updateLabelInfo];
     }];
+    
+    [self touchAction:CGPointMake(5, self.colorReelImageView.height / 2.0)];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    [self touchAction:touches.anyObject];
+    [self touchAction:[touches.anyObject locationInView:self.colorReelImageView]];
 }
 
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    [self touchAction:touches.anyObject];
+    [self touchAction:[touches.anyObject locationInView:self.colorReelImageView]];
 }
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    [self touchAction:touches.anyObject];
+    [self touchAction:[touches.anyObject locationInView:self.colorReelImageView]];
 }
 
-- (void)touchAction:(UITouch *)touch
+- (void)touchAction:(CGPoint)pt
 {
-    CGPoint pt = [touch locationInView:self.colorReelImageView];
-    
     if (distanceBetween(pt, CGPointMake(self.colorReelImageView.width / 2.0,
                                         self.colorReelImageView.width / 2.0)) <= self.colorReelImageView.width / 2.0)
     {
@@ -174,12 +186,15 @@ NSString *const colorReelImageName = @"color_wheel";
         self.realTimeColorView.backgroundColor = self.reelSelectedColor;
         
         [self updateWithReelColor];
+        
+        self.colorRellIndicator.center = pt;
     }
 }
 
 - (void)updateWithReelColor
 {
     [self.regionColorView updateWithFromColor:self.reelSelectedColor endColor:[UIColor blackColor]];
+    [self.colorRellIndicator updateIndicatorColor:[self.reelSelectedColor reverse]];
 }
 
 - (void)updateLabelInfo

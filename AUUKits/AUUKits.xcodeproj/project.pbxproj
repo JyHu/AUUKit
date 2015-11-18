@@ -39,6 +39,7 @@
 		1CB4A8C41BF98EC600498F45 /* AUUStepMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CB4A8C31BF98EC600498F45 /* AUUStepMenu.m */; };
 		1CC8F5EF1BFC51C000A081F4 /* AUUColorSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CC8F5EE1BFC51C000A081F4 /* AUUColorSlider.m */; };
 		1CC8F5F21BFC53E400A081F4 /* AUUColorPickerIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CC8F5F11BFC53E400A081F4 /* AUUColorPickerIndicator.m */; };
+		1CC8F5F51BFC7FDD00A081F4 /* AUUColorSliderIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CC8F5F41BFC7FDD00A081F4 /* AUUColorSliderIndicator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +117,8 @@
 		1CC8F5EE1BFC51C000A081F4 /* AUUColorSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUUColorSlider.m; sourceTree = "<group>"; };
 		1CC8F5F01BFC53E400A081F4 /* AUUColorPickerIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUColorPickerIndicator.h; sourceTree = "<group>"; };
 		1CC8F5F11BFC53E400A081F4 /* AUUColorPickerIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUUColorPickerIndicator.m; sourceTree = "<group>"; };
+		1CC8F5F31BFC7FDD00A081F4 /* AUUColorSliderIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUColorSliderIndicator.h; sourceTree = "<group>"; };
+		1CC8F5F41BFC7FDD00A081F4 /* AUUColorSliderIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUUColorSliderIndicator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +155,8 @@
 				1C06BCB11BFC1ECE00F50E7F /* AUUColorPickerView.m */,
 				1CC8F5ED1BFC51C000A081F4 /* AUUColorSlider.h */,
 				1CC8F5EE1BFC51C000A081F4 /* AUUColorSlider.m */,
+				1CC8F5F31BFC7FDD00A081F4 /* AUUColorSliderIndicator.h */,
+				1CC8F5F41BFC7FDD00A081F4 /* AUUColorSliderIndicator.m */,
 				1CC8F5F01BFC53E400A081F4 /* AUUColorPickerIndicator.h */,
 				1CC8F5F11BFC53E400A081F4 /* AUUColorPickerIndicator.m */,
 				1C06BCB31BFC2D0800F50E7F /* color_wheel.png */,
@@ -430,6 +435,7 @@
 				1CB4A8B21BF988E000498F45 /* UIView+AUUCategory.m in Sources */,
 				1CC8F5EF1BFC51C000A081F4 /* AUUColorSlider.m in Sources */,
 				1C06BC951BFB0FDA00F50E7F /* AUUKeychainAccess.m in Sources */,
+				1CC8F5F51BFC7FDD00A081F4 /* AUUColorSliderIndicator.m in Sources */,
 				1CB4A8471BF96C3E00498F45 /* AppDelegate.m in Sources */,
 				1CB4A8441BF96C3E00498F45 /* main.m in Sources */,
 				1CB4A8AF1BF988BE00498F45 /* UILabel+AUUCategory.m in Sources */,

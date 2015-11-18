@@ -9,7 +9,7 @@
 #import "AUUColorSlider.h"
 #import "UIView+AUUPlot.h"
 #import "UIView+AUUCategory.h"
-#import "AUUColorPickerIndicator.h"
+#import "AUUColorSliderIndicator.h"
 #import "UIColor+AUUCategory.h"
 
 @interface AUUColorSlider()
@@ -18,7 +18,7 @@
 
 @property (retain, nonatomic) UIColor *p_eColor;
 
-@property (retain, nonatomic) AUUColorPickerIndicator *indicator;
+@property (retain, nonatomic) AUUColorSliderIndicator *indicator;
 
 @property (copy, nonatomic) void(^selectedCompletion)(UIColor *);
 
@@ -53,7 +53,7 @@
     self.p_eColor = [[UIColor blackColor] colorWithAlphaComponent:0];
     self.p_fColor = [UIColor blackColor];
     
-    self.indicator = [[AUUColorPickerIndicator alloc] initWithFrame:CGRectMake(-10, -5, 20, self.height + 10)];
+    self.indicator = [[AUUColorSliderIndicator alloc] initWithFrame:CGRectMake(-10, -5, 20, self.height + 10)];
     self.indicator.backgroundColor = [UIColor clearColor];
     [self addSubview:self.indicator];
 }

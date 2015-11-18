@@ -8,6 +8,7 @@
 
 #import "AUUColorPickerIndicator.h"
 #import "UIView+AUUCategory.h"
+#import "AUUMacros.h"
 
 @interface AUUColorPickerIndicator()
 
@@ -21,6 +22,7 @@
 {
     if (self = [super initWithFrame:frame]) {
         self.p_color = [UIColor blueColor];
+        self.backgroundColor = [UIColor clearColor];
     }
     
     return self;
@@ -31,39 +33,28 @@
     self.p_color = color;
     
     [self setNeedsDisplay];
-    
-    self.layer.masksToBounds = YES;
-    self.layer.borderColor = color.CGColor;
-    self.layer.borderWidth = 1.0f;
 }
 
 - (void)drawRect:(CGRect)rect
 {
+    CGFloat r = kMIN(self.width, self.height) / 2.0 - 2;
+    CGPoint c = CGPointMake(self.width / 2.0, self.height / 2.0);
+    
     CGContextRef context = UIGraphicsGetCurrentContext();
     
     [self.p_color setFill];
     [self.p_color setStroke];
     
-    CGContextMoveToPoint(context, self.width / 2.0, self.width / 2.0);
-    CGContextAddArc(context, 0, self.width / 2.0, self.width / 2.0, 0, M_PI_2 * 3, 1);
-    CGContextAddLineToPoint(context, self.width, 0);
-    CGContextAddArc(context, self.width, self.width / 2.0, self.width / 2.0, M_PI_2 * 3, M_PI, 1);
-    CGContextAddLineToPoint(context, self.width / 2.0, self.height - self.width / 2.0);
-    CGContextAddArc(context, self.width, self.height - self.width / 2.0, self.width / 2.0, M_PI, M_PI_2, 1);
-    CGContextAddLineToPoint(context, 0, self.height);
-    CGContextAddArc(context, 0, self.height - self.width / 2.0, self.width / 2.0, M_PI_2 * 3, 0, 1);
+    CGContextMoveToPoint(context, c.x, c.y);
     
-    CGContextSetLineWidth(context, 1);
+    for (NSInteger i = 0; i < 4; i ++)
+    {
+        CGContextAddArc(context, c.x, c.y, r, M_PI_4 * (2 * i + 1), M_PI_4 * 2 * i, 1);
+        CGContextAddLineToPoint(context, c.x, c.y);
+    }
     
-    CGContextFillPath(context);
+    CGContextStrokePath(context);
     
-    
-    CGContextRef lcontext = UIGraphicsGetCurrentContext();
-    
-    CGContextMoveToPoint(lcontext, self.width / 2.0, 0);
-    CGContextAddLineToPoint(lcontext, self.width / 2.0, self.height);
-    CGContextSetLineWidth(lcontext, 1);
-    CGContextStrokePath(lcontext);
 }
 
 
