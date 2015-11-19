@@ -296,5 +296,14 @@ CGFloat distanceBetween(CGPoint pt1, CGPoint pt2)
     }];
 }
 
+- (UIImage *)interceptingToImage
+{
+    UIGraphicsBeginImageContext(self.size);
+    [self.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
 
 @end

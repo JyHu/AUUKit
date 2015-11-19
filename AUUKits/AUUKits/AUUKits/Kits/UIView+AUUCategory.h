@@ -293,4 +293,13 @@ typedef void (^AUUAnimationHandleBlock) (void);
              handleBlock:(AUUAnimationHandleBlock)handle;
 
 
+/**
+ *  @author JyHu, 15-11-19 15:11:40
+ *
+ *  @brief  截取当前View为图片
+ *
+ *  @return 图片 UIImage
+ */
+- (UIImage *)interceptingToImage;
+
 @end

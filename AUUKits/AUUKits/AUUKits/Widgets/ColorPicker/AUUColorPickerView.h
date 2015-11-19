@@ -10,4 +10,6 @@
 
 @interface AUUColorPickerView : UIView
 
+- (void)colorSelectedCompletion:(void (^)(UIColor *color))selectedCompletionBlock;
+
 @end

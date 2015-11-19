@@ -14,6 +14,7 @@
 #import "UILabel+AUUCategory.h"
 #import "AUUColorPickerIndicator.h"
 
+/* 色盘的图片名字 */
 NSString *const colorReelImageName = @"color_wheel";
 
 @interface AUUColorPickerView()
@@ -42,16 +43,17 @@ NSString *const colorReelImageName = @"color_wheel";
 /* 颜色信息的label */
 @property (retain, nonatomic) UILabel *colorLabel;
 
-//@property (retain, nonatomic) UIScrollView *containingScrollView;
 
-
-
-
+/* 色盘上选择的颜色 */
 @property (retain, nonatomic) UIColor *reelSelectedColor;
 
+/* 最后选择的颜色 */
 @property (retain, nonatomic) UIColor *selectedColor;
 
+/* 色盘图片，全局一个，避免手指移动的时候临时创建太多 */
 @property (retain, nonatomic) UIImage *colorReelImage;
+
+@property (copy, nonatomic) void (^colorSelectedCompletionBlock)(UIColor *);
 
 @end
 
@@ -81,18 +83,16 @@ NSString *const colorReelImageName = @"color_wheel";
     return self;
 }
 
+/**
+ *  @author JyHu, 15-11-19 14:11:19
+ *
+ *  @brief  初始化方法
+ */
 - (void)initilization
 {
     self.backgroundColor = RGBA(227, 225, 227, 1);
     self.userInteractionEnabled = YES;
     self.colorReelImage = [UIImage imageNamed:colorReelImageName];
-    
-    /* 添加容器scrollview */
-//    self.containingScrollView = [UIScrollView instanceWithFrame:self.bounds];
-//    self.containingScrollView.backgroundColor = [UIColor clearColor];
-//    self.containingScrollView.showsVerticalScrollIndicator = NO;
-//    self.containingScrollView.showsHorizontalScrollIndicator = NO;
-//    [self addSubview:self.containingScrollView];
     
     /* 取色圆盘 */
     self.colorReelImageView = [UIImageView instanceWithFrame:CGRectMake(0, 44,
@@ -138,6 +138,7 @@ NSString *const colorReelImageName = @"color_wheel";
     self.realTimeColorView.backgroundColor = [UIColor blueColor];
     [self.colorConstrastView addSubview:self.realTimeColorView];
     
+    /* 显示颜色信息的label */
     self.colorLabel = [UILabel instanceWithFrame:CGRectMake(0, 0, 0, 0)];
     [self.colorLabel setFontSize:8.0];
     self.colorLabel.textColor = [UIColor blackColor];
@@ -146,11 +147,13 @@ NSString *const colorReelImageName = @"color_wheel";
     self.colorLabel.numberOfLines = 0;
     [self addSubview:self.colorLabel];
     
+    /* 当 白-主色-黑 选色slider选择结束后的回调 */
     [self.regionColorView colorSelectedCompletion:^(UIColor *regionColor) {
         
         [self.alphaView updateWithAlphaColor:regionColor];
     }];
     
+    /* 当alpha选择结束后的回调 */
     [self.alphaView colorSelectedCompletion:^(UIColor *alphaColor) {
         
         self.realTimeColorView.backgroundColor = alphaColor;
@@ -158,8 +161,11 @@ NSString *const colorReelImageName = @"color_wheel";
         [self updateLabelInfo];
     }];
     
+    /* 初始化选色部位 */
     [self touchAction:CGPointMake(5, self.colorReelImageView.height / 2.0)];
 }
+
+#pragma mark - touches methods
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
@@ -191,6 +197,8 @@ NSString *const colorReelImageName = @"color_wheel";
     }
 }
 
+#pragma mark - 颜色选择后的页面刷新
+
 - (void)updateWithReelColor
 {
     [self.regionColorView updateWithRegionColor:self.reelSelectedColor];
@@ -205,6 +213,14 @@ NSString *const colorReelImageName = @"color_wheel";
     [self.colorLabel sizeToFitWithWidth:200];
     self.colorLabel.xOrigin = self.width - self.colorLabel.width - 10;
     self.colorLabel.yOrigin = 20;
+}
+
+- (void)colorSelectedCompletion:(void (^)(UIColor *))selectedCompletionBlock
+{
+    if (self.colorSelectedCompletionBlock)
+    {
+        
+    }
 }
 
 @end

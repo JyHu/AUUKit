@@ -10,6 +10,13 @@
 
 @interface AUUColorSliderIndicator : UIView
 
+/**
+ *  @author JyHu, 15-11-19 15:11:34
+ *
+ *  @brief  色条指示器的初始化方法
+ *
+ *  @param color 色条指示器的颜色
+ */
 - (void)updateIndicatorColor:(UIColor *)color;
 
 @end

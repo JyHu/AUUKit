@@ -11,6 +11,7 @@
 
 @interface AUUColorSliderIndicator()
 
+// 私有的颜色
 @property (retain, nonatomic) UIColor *p_color;
 
 @end
@@ -26,6 +27,7 @@
     return self;
 }
 
+// 更新指示器颜色
 - (void)updateIndicatorColor:(UIColor *)color
 {
     self.p_color = color;
@@ -36,6 +38,7 @@
     self.layer.borderColor = color.CGColor;
     self.layer.borderWidth = 1.0f;
 }
+
 
 - (void)drawRect:(CGRect)rect
 {
