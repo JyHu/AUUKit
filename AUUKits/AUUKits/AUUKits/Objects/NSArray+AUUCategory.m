@@ -19,8 +19,6 @@
                                                swizedSelector:@selector(_objectAtIndex:)];
         [self methodExchangeImplementationsWithOriginSelector:@selector(firstObject)
                                                swizedSelector:@selector(_firstObject)];
-//        [self methodExchangeImplementationsWithOriginSelector:@selector(lastObject)
-//                                               swizedSelector:@selector(_lastObject)];
     });
 }
 

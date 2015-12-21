@@ -306,4 +306,18 @@ CGFloat distanceBetween(CGPoint pt1, CGPoint pt2)
     return image;
 }
 
+- (void)roundCorner
+{
+    [self roundCornerWithCornerRadius:self.height / 2.0];
+}
+
+- (void)roundCornerWithCornerRadius:(CGFloat)cornerRadius
+{
+    self.clipsToBounds = YES;
+    self.backgroundColor = [UIColor clearColor];
+    
+    self.layer.masksToBounds = YES;
+    self.layer.cornerRadius = cornerRadius;
+}
+
 @end

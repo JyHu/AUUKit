@@ -25,6 +25,7 @@
 #define kViewYOrigin(V) (V.frame.origin.y)      /* 获取 View 的y坐标 */
 #define kViewWidth(V)   (V.frame.size.width)    /* 获取 View 的宽度 */
 #define kViewHeight(V)  (V.frame.size.height)   /* 获取 View 的高度 */
+
 #define kViewCenterX(V) (V.center.x)            /* 获取 View中心的x坐标 */
 #define kViewCenterY(V) (V.center.y)            /* 获取 View中心的y坐标 */
 
@@ -45,10 +46,10 @@ void resetViewSize(UIView *view, CGSize size);          /* 重设View的size */
 void resetViewCenterX(UIView *view, CGFloat cx);        /* 重设View的中心点x坐标 */
 void resetViewCenterY(UIView *view, CGFloat cy);        /* 重设View的中心点y坐标 */
 
-CGFloat distanceBetween(CGPoint pt1, CGPoint pt2);
+CGFloat distanceBetween(CGPoint pt1, CGPoint pt2);      /* 获取两个坐标间的距离 */
 
 
-typedef void (^AUUAnimationHandleBlock) (void);
+typedef void (^AUUAnimationHandleBlock) (void);         /* 动画的Block */
 
 
 @interface UIView (AUUCategory)
@@ -73,6 +74,18 @@ typedef void (^AUUAnimationHandleBlock) (void);
  */
 + (instancetype)instanceWithFrame:(CGRect)frame;
 
+/**
+ *  @author JyHu, 15-12-21 23:12:11
+ *
+ *  初始化方法，获取一个view，上下左右分别与view相距edg枚举里的各方向值
+ *
+ *  @param edg  上下左右的距离
+ *  @param view superView
+ *
+ *  @return self
+ *
+ *  @since 1.0
+ */
 + (instancetype)instanceWithEdgeInsets:(UIEdgeInsets)edg withSuperView:(UIView *)view;
 
 /**
@@ -131,8 +144,22 @@ typedef void (^AUUAnimationHandleBlock) (void);
  */
 @property (assign, nonatomic) CGPoint origin;
 
+/**
+ *  @author JyHu, 15-12-21 23:12:42
+ *
+ *  获取、设置当前视图的中心x坐标
+ *
+ *  @since 1.0
+ */
 @property (assign, nonatomic) CGFloat centerX;
 
+/**
+ *  @author JyHu, 15-12-21 23:12:06
+ *
+ *  获取设置当前视图的中心y坐标
+ *
+ *  @since 1.0
+ */
 @property (assign, nonatomic) CGFloat centerY;
 
 /**
@@ -301,5 +328,25 @@ typedef void (^AUUAnimationHandleBlock) (void);
  *  @return 图片 UIImage
  */
 - (UIImage *)interceptingToImage;
+
+/**
+ *  @author JyHu, 15-12-21 23:12:03
+ *
+ *  设置圆角，默认的弧度半径是高度的一半
+ *
+ *  @since 1.0
+ */
+- (void)roundCorner;
+
+/**
+ *  @author JyHu, 15-12-21 23:12:32
+ *
+ *  设置一定的弧度圆角
+ *
+ *  @param cornerRadius 圆角的半径
+ *
+ *  @since 1.0
+ */
+- (void)roundCornerWithCornerRadius:(CGFloat)cornerRadius;
 
 @end

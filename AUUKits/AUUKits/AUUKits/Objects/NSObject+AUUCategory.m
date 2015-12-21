@@ -17,8 +17,6 @@ void methodExchangeImplementations(Class cls,
     Method swizedMethod = class_getInstanceMethod(cls, swizedSelector);
     
     method_exchangeImplementations(swizedMethod, originMethod);
-    
-    NSLog(@"%@", NSStringFromClass(cls));
 }
 
 @implementation NSObject (AUUCategory)
