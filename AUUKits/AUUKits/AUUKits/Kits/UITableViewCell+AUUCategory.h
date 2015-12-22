@@ -10,6 +10,15 @@
 
 @interface UITableViewCell (AUUCategory)
 
+/**
+ *  @author JyHu, 15-12-22 10:12:58
+ *
+ *  获取当前cell所在的table
+ *
+ *  @return table
+ *
+ *  @since v1.0
+ */
 - (UITableView *)myContainerTable;
 
 @end
