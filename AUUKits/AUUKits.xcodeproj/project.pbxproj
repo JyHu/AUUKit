@@ -14,6 +14,7 @@
 		1C06BCAB1BFB33E800F50E7F /* UITextView+AUUCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C06BCAA1BFB33E800F50E7F /* UITextView+AUUCategory.m */; };
 		1C06BCAE1BFC0F2D00F50E7F /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C06BCAD1BFC0F2D00F50E7F /* DrawView.m */; };
 		1C06BCB21BFC1ECE00F50E7F /* AUUColorPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C06BCB11BFC1ECE00F50E7F /* AUUColorPickerView.m */; };
+		1C4F0F4C1C28EAEA0038B8BE /* UITableViewCell+AUUCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4F0F4B1C28EAEA0038B8BE /* UITableViewCell+AUUCategory.m */; };
 		1C97CFDB1BFDBAF800174962 /* color_wheel.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C97CFDA1BFDBAF800174962 /* color_wheel.png */; };
 		1CB4A8441BF96C3E00498F45 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CB4A8431BF96C3E00498F45 /* main.m */; };
 		1CB4A8471BF96C3E00498F45 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CB4A8461BF96C3E00498F45 /* AppDelegate.m */; };
@@ -67,6 +68,8 @@
 		1C06BCAD1BFC0F2D00F50E7F /* DrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
 		1C06BCB01BFC1ECE00F50E7F /* AUUColorPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUUColorPickerView.h; sourceTree = "<group>"; };
 		1C06BCB11BFC1ECE00F50E7F /* AUUColorPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUUColorPickerView.m; sourceTree = "<group>"; };
+		1C4F0F4A1C28EAEA0038B8BE /* UITableViewCell+AUUCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+AUUCategory.h"; sourceTree = "<group>"; };
+		1C4F0F4B1C28EAEA0038B8BE /* UITableViewCell+AUUCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+AUUCategory.m"; sourceTree = "<group>"; };
 		1C97CFDA1BFDBAF800174962 /* color_wheel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = color_wheel.png; sourceTree = "<group>"; };
 		1CB4A83F1BF96C3E00498F45 /* AUUKits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AUUKits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CB4A8431BF96C3E00498F45 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -256,6 +259,8 @@
 				1C06BCA71BFB326E00F50E7F /* UITextField+AUUCategory.m */,
 				1C06BCA91BFB33E800F50E7F /* UITextView+AUUCategory.h */,
 				1C06BCAA1BFB33E800F50E7F /* UITextView+AUUCategory.m */,
+				1C4F0F4A1C28EAEA0038B8BE /* UITableViewCell+AUUCategory.h */,
+				1C4F0F4B1C28EAEA0038B8BE /* UITableViewCell+AUUCategory.m */,
 			);
 			path = Kits;
 			sourceTree = "<group>";
@@ -428,6 +433,7 @@
 				1CB4A8661BF96F0200498F45 /* NSArray+AUUCategory.m in Sources */,
 				1C06BCAE1BFC0F2D00F50E7F /* DrawView.m in Sources */,
 				1CB4A8A01BF9853C00498F45 /* AUUJSONAdaptor.m in Sources */,
+				1C4F0F4C1C28EAEA0038B8BE /* UITableViewCell+AUUCategory.m in Sources */,
 				1CB4A89D1BF984CA00498F45 /* NSNumber+AUUCategory.m in Sources */,
 				1CB4A8B51BF989EE00498F45 /* UIView+AUUPlot.m in Sources */,
 				1C06BCA81BFB326E00F50E7F /* UITextField+AUUCategory.m in Sources */,
